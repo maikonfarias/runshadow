@@ -1,9 +1,9 @@
 Run Shadow
 =========
 
-Endless running game using Unity engine, playing a Shadow as main character.
+Endless Running game using Unity engine, playing a Shadow as main character.
 
-Source code for the game Run Shadow mobile devices.
+Source code for the game Run Shadow for mobile devices.
 - Client Unity3d C#;
 - Server PHP with MySQL;
 
