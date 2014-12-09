@@ -1,21 +1,10 @@
----
-title: Run Shadow
-description: Endless running game using Unity engine, playing a Shadow as main character.
-author: Maikon Farias Roldao
-tags: unity, mobile, game
-colors: light yellow
-created:  2011 Mar 15
-modified: 2011 Apr 16
-
----
-
 Run Shadow
 =========
 
 Endless running game using Unity engine, playing a Shadow as main character.
 
 Source code for the game Run Shadow mobile devices.
-- Client Unity3d engine (C#);
+- Client Unity3d C#;
 - Server PHP with MySQL;
 
 Screenshot:
