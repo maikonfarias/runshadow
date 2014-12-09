@@ -1,0 +1,102 @@
+fileFormatVersion: 2
+guid: 1d7c99bf2bac6dc468164b060c2d669f
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: spriteRunner3_0
+    21300002: spriteRunner3_1
+    21300004: spriteRunner3_2
+    21300006: spriteRunner3_3
+    21300008: spriteRunner3_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 80
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: spriteRunner3_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 6
+        width: 33
+        height: 90
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spriteRunner3_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 5
+        width: 30
+        height: 93
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spriteRunner3_2
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 5
+        width: 61
+        height: 93
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spriteRunner3_3
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 5
+        width: 40
+        height: 93
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spriteRunner3_4
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 10
+        width: 34
+        height: 82
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

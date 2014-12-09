@@ -1,0 +1,12 @@
+C:\Users\maikonfarias\Documents\Unity Projects\SharedUnityProjects\runnergame\Temp\bin\Debug\Assembly-CSharp.dll
+C:\Users\maikonfarias\Documents\Unity Projects\SharedUnityProjects\runnergame\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\Users\maikonfarias\Documents\Unity Projects\SharedUnityProjects\runnergame\Temp\bin\Debug\UnityEditor.dll
+C:\Users\maikonfarias\Documents\Unity Projects\SharedUnityProjects\runnergame\Temp\bin\Debug\UnityEngine.dll
+C:\Users\maikonfarias\Documents\Unity Projects\SharedUnityProjects\runnergame\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\maikonfarias\Documents\Unity Projects\SharedUnityProjects\runnergame\Temp\bin\Debug\nunit.framework.dll
+C:\Users\maikonfarias\Documents\Unity Projects\SharedUnityProjects\runnergame\Temp\bin\Debug\Unity.DataContract.dll
+C:\Users\maikonfarias\Documents\Unity Projects\SharedUnityProjects\runnergame\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\maikonfarias\Documents\Unity Projects\SharedUnityProjects\runnergame\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache
+C:\Users\maikonfarias\Documents\Unity Projects\SharedUnityProjects\runnergame\obj\Debug\Assembly-CSharp.dll
+C:\Users\maikonfarias\Documents\Unity Projects\SharedUnityProjects\runnergame\obj\Debug\Assembly-CSharp.pdb
+C:\Users\maikonfarias\Documents\Unity Projects\SharedUnityProjects\runnergame\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb

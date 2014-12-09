@@ -1,0 +1,91 @@
+fileFormatVersion: 2
+guid: 72c7fda481804ae4a850f7ee8fb8bef3
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: fuleco 4_0
+    21300002: fuleco 4_1
+    21300004: fuleco 4_2
+    21300006: fuleco 4_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 200
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: fuleco 4_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 26
+        width: 136
+        height: 238
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fuleco 4_1
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 24
+        width: 138
+        height: 237
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fuleco 4_2
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 33
+        width: 133
+        height: 230
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fuleco 4_3
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 31
+        width: 132
+        height: 241
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

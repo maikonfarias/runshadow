@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: a37cda68f573535439e2f3ad26bda0f9
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - musicSound: {instanceID: 0}
+  - jumpSound: {instanceID: 0}
+  - groundCheck: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

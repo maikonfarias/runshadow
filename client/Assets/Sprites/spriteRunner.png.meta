@@ -1,0 +1,179 @@
+fileFormatVersion: 2
+guid: 44b4c2c3291386d4381389e7e1ee2110
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: skeletonRunner_0
+    21300002: skeletonRunner_1
+    21300004: skeletonRunner_2
+    21300006: skeletonRunner_3
+    21300008: skeletonRunner_4
+    21300010: skeletonRunner_5
+    21300012: skeletonRunner_6
+    21300014: skeletonRunner_7
+    21300016: skeletonRunner_8
+    21300018: skeletonRunner_9
+    21300020: skeletonRunner_10
+    21300022: skeletonRunner_11
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 40
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: skeletonRunner_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 60
+        width: 16
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: skeletonRunner_1
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 60
+        width: 18
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: skeletonRunner_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 60
+        width: 11
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: skeletonRunner_3
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 60
+        width: 9
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: skeletonRunner_4
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 60
+        width: 18
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: skeletonRunner_5
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 60
+        width: 11
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: skeletonRunner_6
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 60
+        width: 8
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: skeletonRunner_7
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 2
+        width: 15
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: skeletonRunner_8
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 2
+        width: 30
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: skeletonRunner_9
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 2
+        width: 20
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: skeletonRunner_10
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 4
+        width: 17
+        height: 41
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: skeletonRunner_11
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 2
+        width: 17
+        height: 43
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

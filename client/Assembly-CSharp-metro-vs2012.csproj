@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+		<ProductVersion>10.0.20506</ProductVersion>
+		<SchemaVersion>2.0</SchemaVersion>
+		<ProjectGuid>{FBA57953-C0C3-F9D8-E86A-9F7C063B5FDE}</ProjectGuid>
+		<OutputType>Library</OutputType>
+		<AppDesignerFolder>Properties</AppDesignerFolder>
+		<AssemblyName>Assembly-CSharp</AssemblyName>
+		<FileAlignment>512</FileAlignment>
+		<ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+		<RootNamespace>AssemblyCSharpmetro</RootNamespace>
+		<DefaultLanguage>en-US</DefaultLanguage>
+  </PropertyGroup>
+	 <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+  <DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>bin\Store 8.0\x86\Debug</OutputPath>
+	<DefineConstants>DEBUG;TRACE;ENABLE_PROFILER;NETFX_CORE;UNITY_METRO;UNITY_4_0_0;UNITY_4_0;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_IMAGEEFFECTS;UNITY_WINRT;ENABLE_AUDIO_FMOD;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_GENERICS;ENABLE_MOVIES;ENABLE_AUDIO;UNITY_METRO_8_0;</DefineConstants>
+	<PlatformTarget>AnyCPU</PlatformTarget>
+	<UseVSHostingProcess>false</UseVSHostingProcess>
+	<ErrorReport>prompt</ErrorReport>
+	<Prefer32Bit>false</Prefer32Bit>
+</PropertyGroup>
+<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+  <DebugSymbols>true</DebugSymbols>
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>bin\Store 8.0\x86\Release</OutputPath>
+	<DefineConstants>TRACE;ENABLE_PROFILER;NETFX_CORE;UNITY_METRO;UNITY_4_0_0;UNITY_4_0;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_IMAGEEFFECTS;UNITY_WINRT;ENABLE_AUDIO_FMOD;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_GENERICS;ENABLE_MOVIES;ENABLE_AUDIO;UNITY_METRO_8_0;</DefineConstants>
+	<PlatformTarget>AnyCPU</PlatformTarget>
+	<UseVSHostingProcess>false</UseVSHostingProcess>
+	<ErrorReport>prompt</ErrorReport>
+	<Prefer32Bit>false</Prefer32Bit>
+</PropertyGroup>
+<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Master|x86' ">
+  <DebugSymbols>true</DebugSymbols>
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>bin\Store 8.0\x86\Master</OutputPath>
+	<DefineConstants>TRACE;NETFX_CORE;UNITY_METRO;UNITY_4_0_0;UNITY_4_0;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_IMAGEEFFECTS;UNITY_WINRT;ENABLE_AUDIO_FMOD;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_GENERICS;ENABLE_MOVIES;ENABLE_AUDIO;UNITY_METRO_8_0;</DefineConstants>
+	<PlatformTarget>AnyCPU</PlatformTarget>
+	<UseVSHostingProcess>false</UseVSHostingProcess>
+	<ErrorReport>prompt</ErrorReport>
+	<Prefer32Bit>false</Prefer32Bit>
+</PropertyGroup>
+<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+  <DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>bin\Store 8.0\ARM\Debug</OutputPath>
+	<DefineConstants>DEBUG;TRACE;ENABLE_PROFILER;NETFX_CORE;UNITY_METRO;UNITY_4_0_0;UNITY_4_0;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_IMAGEEFFECTS;UNITY_WINRT;ENABLE_AUDIO_FMOD;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_GENERICS;ENABLE_MOVIES;ENABLE_AUDIO;UNITY_METRO_8_0;</DefineConstants>
+	<PlatformTarget>AnyCPU</PlatformTarget>
+	<UseVSHostingProcess>false</UseVSHostingProcess>
+	<ErrorReport>prompt</ErrorReport>
+	<Prefer32Bit>false</Prefer32Bit>
+</PropertyGroup>
+<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+  <DebugSymbols>true</DebugSymbols>
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>bin\Store 8.0\ARM\Release</OutputPath>
+	<DefineConstants>TRACE;ENABLE_PROFILER;NETFX_CORE;UNITY_METRO;UNITY_4_0_0;UNITY_4_0;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_IMAGEEFFECTS;UNITY_WINRT;ENABLE_AUDIO_FMOD;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_GENERICS;ENABLE_MOVIES;ENABLE_AUDIO;UNITY_METRO_8_0;</DefineConstants>
+	<PlatformTarget>AnyCPU</PlatformTarget>
+	<UseVSHostingProcess>false</UseVSHostingProcess>
+	<ErrorReport>prompt</ErrorReport>
+	<Prefer32Bit>false</Prefer32Bit>
+</PropertyGroup>
+<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Master|ARM' ">
+  <DebugSymbols>true</DebugSymbols>
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>bin\Store 8.0\ARM\Master</OutputPath>
+	<DefineConstants>TRACE;NETFX_CORE;UNITY_METRO;UNITY_4_0_0;UNITY_4_0;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_IMAGEEFFECTS;UNITY_WINRT;ENABLE_AUDIO_FMOD;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_GENERICS;ENABLE_MOVIES;ENABLE_AUDIO;UNITY_METRO_8_0;</DefineConstants>
+	<PlatformTarget>AnyCPU</PlatformTarget>
+	<UseVSHostingProcess>false</UseVSHostingProcess>
+	<ErrorReport>prompt</ErrorReport>
+	<Prefer32Bit>false</Prefer32Bit>
+</PropertyGroup>
+
+  <ItemGroup>
+		<Reference Include="System" />
+		<Reference Include="System.XML" />
+		<Reference Include="System.Core" />
+		<Reference Include="UnityEngine">
+	<HintPath>$(SolutionDir)\$(SolutionName)\Unprocessed\UnityEngine.dll</HintPath>
+</Reference>
+<Reference Include="WinRTLegacy">
+	<HintPath>$(SolutionDir)\$(SolutionName)\Unprocessed\WinRTLegacy.dll</HintPath>
+</Reference>
+<ProjectReference Include="Assembly-CSharp-firstpass-metro-vs2012.csproj">
+  <Project>{194d914d-0664-444e-b663-4d0f1c80af68}</Project>
+  <Name>Assembly-CSharp-firstpass-metro-vs2012</Name>
+</ProjectReference>
+
+  </ItemGroup>
+  <ItemGroup>
+     		<None Include="Assets\**\Plugins\**\*.cs; Assets\Standard Assets\**\*.cs; Assets\Pro Standard Assets\**\*.cs; Assets\Standard Assets (Mobile)\**\*.cs; Assets\Resources\**\*.cs" />
+		<Compile Include="Assets\**\*.cs" Exclude="Assets\**\Editor\**\*.cs;@(None)" />
+
+  </ItemGroup>
+	<Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+	<PropertyGroup>
+		<PostBuildEvent>
+echo Running Serialization Weaver
+mkdir "$(SolutionDir)\SerializationWeaverTemp"
+"C:/Program Files (x86)/Unity/Editor/Data/PlaybackEngines/MetroSupport\Tools\\SerializationWeaver\\SerializationWeaver.exe" "$(TargetPath)" -pdb -verbose -unity-engine="$(SolutionDir)\$(SolutionName)\\Unprocessed\UnityEngine.dll" "$(SolutionDir)\SerializationWeaverTemp"
+copy /Y "$(SolutionDir)\SerializationWeaverTemp\$(TargetName).dll" "$(TargetDir)\$(TargetName).dll"
+copy /Y "$(SolutionDir)\SerializationWeaverTemp\$(TargetName).pdb" "$(TargetDir)\$(TargetName).pdb"
+rmdir /S /Q "$(SolutionDir)\SerializationWeaverTemp"
+if not exist "$(TargetDir)\Unprocessed" mkdir "$(TargetDir)\Unprocessed"
+move /Y "$(TargetDir)\Assembly-CSharp.dll" "$(TargetDir)\Unprocessed\Assembly-CSharp.dll"
+move /Y "$(TargetDir)\Assembly-CSharp.pdb" "$(TargetDir)\Unprocessed\Assembly-CSharp.pdb"
+move /Y "$(TargetDir)\Assembly-CSharp-firstpass.dll" "$(TargetDir)\Unprocessed\Assembly-CSharp-firstpass.dll"
+move /Y "$(TargetDir)\Assembly-CSharp-firstpass.pdb" "$(TargetDir)\Unprocessed\Assembly-CSharp-firstpass.pdb"
+
+		</PostBuildEvent>
+  </PropertyGroup>
+</Project>
