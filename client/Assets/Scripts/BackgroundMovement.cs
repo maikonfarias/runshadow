@@ -4,12 +4,12 @@ using System.Collections;
 public class BackgroundMovement : MonoBehaviour {
 
     GameObject player;
-	void Start () 
+    void Start () 
     {
         player = GameObject.FindGameObjectsWithTag("Player")[0];
-	}
-	
-	void Update () 
+    }
+    
+    void Update () 
     {
         player = GameObject.FindGameObjectsWithTag("Player")[0];
         if (player != null)
@@ -21,5 +21,5 @@ public class BackgroundMovement : MonoBehaviour {
                 this.transform.position += new Vector3(7.0f * Time.deltaTime, 0, 0);
             }
         }
-	}
+    }
 }
