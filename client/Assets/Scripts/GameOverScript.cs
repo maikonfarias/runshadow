@@ -430,7 +430,7 @@ public class GameOverScript : MonoBehaviour
     IEnumerator PostScores(string name, int score)
     {
         sendScoreStatus = 1;
-        string secretKey = "YOUR-SERVER-SECRET-KEY"; //TODO put this on the config file
+        string secretKey = Config.ServerSecrectKey;
                 
         // Server Address
         string addScoreURL = "http://maikonfarias.com/unity/runner/score_server?action=add&"; // TODO put this on the config file
