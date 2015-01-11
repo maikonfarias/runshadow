@@ -1251,7 +1251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterSprites: []
   characterButtons:
-  - {fileID: 2800000, guid: 1bea4aeaff0900140ac09aebe4b667f4, type: 3}
+  - {fileID: 2800000, guid: 08d45f02cc366264c946ec7956815514, type: 3}
   - {fileID: 2800000, guid: a3b79b975e9ed15498d62acaf8c9115a, type: 3}
   - {fileID: 2800000, guid: 29e436577633b334c81c422d3c8effdc, type: 3}
   - {fileID: 2800000, guid: 62ca38735468a12478225947ff0a1660, type: 3}
