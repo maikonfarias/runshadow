@@ -5,11 +5,11 @@ public static class Config {
 
     public static string Version
     {
-        get { return "1.16"; }
+        get { return "1.18"; }
     }
 
     public static float ScoreMultiplier
     {
-        get { return 2.3f; }
+        get { return 2.5f; }
     }
 }
