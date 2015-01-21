@@ -39,7 +39,7 @@ PlayerSettings:
   defaultIsNativeResolution: 1
   runInBackground: 0
   captureSingleScreen: 0
-  Override IPod Music: 1
+  Override IPod Music: 0
   Prepare IOS For Recording: 0
   enableHWStatistics: 1
   usePlayerLog: 1
@@ -109,7 +109,7 @@ PlayerSettings:
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
-    - m_Icon: {fileID: 2800000, guid: e40f6cb584cd18943b2a09d0d7dba650, type: 3}
+    - m_Icon: {fileID: 2800000, guid: f31e4cb563fe2b9438a896d0ddfaae29, type: 3}
       m_Size: 128
   m_BuildTargetBatching:
   - m_BuildTarget: Web
