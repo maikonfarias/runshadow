@@ -121,6 +121,9 @@ PlayerSettings:
   - m_BuildTarget: Android
     m_StaticBatching: 1
     m_DynamicBatching: 1
+  - m_BuildTarget: Windows Store Apps
+    m_StaticBatching: 1
+    m_DynamicBatching: 1
   webPlayerTemplate: APPLICATION:Black Background
   m_TemplateCustomTags: {}
   locationUsageDescription: 
@@ -165,65 +168,65 @@ PlayerSettings:
   flashStrippingLevel: 2
   spritePackerPolicy: 
   scriptingDefineSymbols: {}
-  metroPackageName: RunShadow
-  metroPackageLogo: C:/Users/maikonfarias/Pictures/runner/icons/runshadow_icon.png
-  metroPackageLogo140: 
-  metroPackageLogo180: 
-  metroPackageLogo240: 
-  metroPackageVersion: 1.0.0.0
+  metroPackageName: com.maikonfarias.runshadow
+  metroPackageLogo: Assets/Sprites/Icons/icon_50.png
+  metroPackageLogo140: Assets/Sprites/Icons/icon_70.png
+  metroPackageLogo180: Assets/Sprites/Icons/icon_90.png
+  metroPackageLogo240: Assets/Sprites/Icons/icon_120.png
+  metroPackageVersion: 1.18.0.0
   metroCertificatePath: Assets/MetroTestCertificate.pfx
   metroCertificatePassword: EIACGFN
-  metroCertificateSubject: Maikon
-  metroCertificateIssuer: Maikon
-  metroCertificateNotAfter: 807ee6db483dd001
+  metroCertificateSubject: Maikon Farias Roldao
+  metroCertificateIssuer: Maikon Farias Roldao
+  metroCertificateNotAfter: 8052ddf8e057d101
   metroApplicationDescription: Endless Runner Game
-  metroStoreTileLogo80: 
-  metroStoreTileLogo: 
-  metroStoreTileLogo140: 
-  metroStoreTileLogo180: 
-  metroStoreTileWideLogo80: 
-  metroStoreTileWideLogo: 
-  metroStoreTileWideLogo140: 
-  metroStoreTileWideLogo180: 
-  metroStoreTileSmallLogo80: 
-  metroStoreTileSmallLogo: 
-  metroStoreTileSmallLogo140: 
-  metroStoreTileSmallLogo180: 
-  metroStoreSmallTile80: 
-  metroStoreSmallTile: 
-  metroStoreSmallTile140: 
-  metroStoreSmallTile180: 
-  metroStoreLargeTile80: 
-  metroStoreLargeTile: 
-  metroStoreLargeTile140: 
-  metroStoreLargeTile180: 
+  metroStoreTileLogo80: Assets/Sprites/Icons/icon_120.png
+  metroStoreTileLogo: Assets/Sprites/Icons/icon_150.png
+  metroStoreTileLogo140: Assets/Sprites/Icons/icon_210.png
+  metroStoreTileLogo180: Assets/Sprites/Icons/icon_270.png
+  metroStoreTileWideLogo80: Assets/Sprites/Icons/icon_120_248.png
+  metroStoreTileWideLogo: Assets/Sprites/Icons/icon_310_150.png
+  metroStoreTileWideLogo140: Assets/Sprites/Icons/icon_434_210.png
+  metroStoreTileWideLogo180: Assets/Sprites/Icons/icon_558_270.png
+  metroStoreTileSmallLogo80: Assets/Sprites/Icons/icon_24.png
+  metroStoreTileSmallLogo: Assets/Sprites/Icons/icon_30.png
+  metroStoreTileSmallLogo140: Assets/Sprites/Icons/icon_42.png
+  metroStoreTileSmallLogo180: Assets/Sprites/Icons/icon_54.png
+  metroStoreSmallTile80: Assets/Sprites/Icons/icon_56.png
+  metroStoreSmallTile: Assets/Sprites/Icons/icon_70.png
+  metroStoreSmallTile140: Assets/Sprites/Icons/icon_98.png
+  metroStoreSmallTile180: Assets/Sprites/Icons/icon_126.png
+  metroStoreLargeTile80: Assets/Sprites/Icons/icon_248.png
+  metroStoreLargeTile: Assets/Sprites/Icons/icon_310.png
+  metroStoreLargeTile140: Assets/Sprites/Icons/icon_434.png
+  metroStoreLargeTile180: Assets/Sprites/Icons/icon_558.png
   metroStoreSplashScreenImage: 
   metroStoreSplashScreenImage140: 
   metroStoreSplashScreenImage180: 
-  metroPhoneAppIcon: 
-  metroPhoneAppIcon140: 
-  metroPhoneAppIcon240: 
-  metroPhoneSmallTile: 
-  metroPhoneSmallTile140: 
-  metroPhoneSmallTile240: 
-  metroPhoneMediumTile: 
-  metroPhoneMediumTile140: 
-  metroPhoneMediumTile240: 
-  metroPhoneWideTile: 
-  metroPhoneWideTile140: 
-  metroPhoneWideTile240: 
+  metroPhoneAppIcon: Assets/Sprites/Icons/icon_44.png
+  metroPhoneAppIcon140: Assets/Sprites/Icons/icon_62.png
+  metroPhoneAppIcon240: Assets/Sprites/Icons/icon_106.png
+  metroPhoneSmallTile: Assets/Sprites/Icons/icon_71.png
+  metroPhoneSmallTile140: Assets/Sprites/Icons/icon_99.png
+  metroPhoneSmallTile240: Assets/Sprites/Icons/icon_170.png
+  metroPhoneMediumTile: Assets/Sprites/Icons/icon_150.png
+  metroPhoneMediumTile140: Assets/Sprites/Icons/icon_210.png
+  metroPhoneMediumTile240: Assets/Sprites/Icons/icon_360.png
+  metroPhoneWideTile: Assets/Sprites/Icons/icon_310_150.png
+  metroPhoneWideTile140: Assets/Sprites/Icons/icon_434_210.png
+  metroPhoneWideTile240: Assets/Sprites/Icons/tile_744_360.png
   metroPhoneSplashScreenImage: 
   metroPhoneSplashScreenImage140: 
   metroPhoneSplashScreenImage240: 
   metroTileShortName: Run Shadow
   metroCommandLineArgsFile: 
   metroTileShowName: 0
-  metroMediumTileShowName: 0
-  metroLargeTileShowName: 0
-  metroWideTileShowName: 0
+  metroMediumTileShowName: 1
+  metroLargeTileShowName: 1
+  metroWideTileShowName: 1
   metroDefaultTileSize: 1
-  metroTileForegroundText: 2
-  metroTileBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  metroTileForegroundText: 1
+  metroTileBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   metroSplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   metroSplashScreenUseBackgroundColor: 0
   metroCapabilities:
