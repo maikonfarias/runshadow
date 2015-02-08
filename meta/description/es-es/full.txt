@@ -1,10 +1,10 @@
-Run Shadow es un juego de plataforma Endless Runner (corredor sin fin), hecho en Unity3D, controlando una sombra como personaje.
+Run Shadow es un juego de plataforma Endless Runner (corredor sin fin), hecho en Unity3D, controlando Shadow como personaje.
 
 Características:
-- Desafiante, mapas generados aleatorizados
+- Desafiante, mapas generados aleatorios
 - Hermosos gráficos 2D
 - Controles simples
 - Mejores puntuaciones en línea
 - Muchos personajes y mapas para desbloquear
 
-Todavía estoy aprendiendo desarrollo de juegos, consejos y comentarios son bienvenidos.
+Todavía estamos aprendiendo desarrollo de juegos, consejos y comentarios son bienvenidos.

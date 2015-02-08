@@ -1,4 +1,4 @@
-Run Shadow ist ein Endless Runner Spiel mit Unity gemacht, spielen ein Schatten als Hauptfigur.
+Run Shadow ist ein Endless Runner Spiel mit Unity gemacht, spielen Shadow als Hauptfigur.
 
 Eigenschaften:
 - Herausfordernde, randomisierte Maps
@@ -7,4 +7,4 @@ Eigenschaften:
 - Online-Highscores
 - Viele Charaktere und Maps zu entsperren
 
-Ich lerne Videospielentwicklung, Feedback und Tipps sind willkommen.
+Wir lernen Videospielentwicklung, Feedback und Tipps sind willkommen.

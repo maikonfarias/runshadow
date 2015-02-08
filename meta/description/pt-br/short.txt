@@ -1,1 +1,1 @@
-Jogo de plataforma de Endless Runner, controlando uma sombra como personagem.
+Jogo de plataforma de Endless Runner, controlando Shadow como personagem.

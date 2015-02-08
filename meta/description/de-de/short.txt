@@ -1,1 +1,1 @@
-Endless Runner Spiel, spielen ein Schatten als Hauptfigur.
+Endless Runner Spiel, spielen Shadow als Hauptfigur.
