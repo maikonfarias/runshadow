@@ -1,0 +1,1 @@
+Endless Runner game, playing a Shadow as main character with randomized maps.

@@ -1,0 +1,10 @@
+Run Shadow is an Endless Runner game made with Unity, playing a Shadow as main character.
+
+Features:
+- Challenging, randomized maps
+- Beautiful 2D graphics
+- Simple controls
+- Online Highscores
+- Many Characters and Maps to unlock
+
+Still learning game development, feedback and tips are welcome.
