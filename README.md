@@ -1,7 +1,7 @@
 Run Shadow
 =========
 
-Endless Running game using Unity engine, playing a Shadow as main character.
+Endless Running game using Unity engine, playing Shadow as main character.
 
 Source code for the game Run Shadow for mobile devices.
 - Client Unity3d C#;
@@ -20,3 +20,6 @@ https://itunes.apple.com/us/app/run-shadow/id881946921?ls=1&mt=8
 
 Windows Phone:
 http://www.windowsphone.com/pt-br/store/app/run-shadow/7b9f263d-1985-42c3-b053-e35b9a21ec32
+
+Windows 8 App:
+http://apps.microsoft.com/windows/app/run-shadow/5846a200-f50d-4439-8bb0-1215aed1e9b4
