@@ -91,14 +91,17 @@ public class CharControllerScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape) || (Input.GetKeyDown(KeyCode.JoystickButton7)))
         {
-            if (Time.timeScale == 1.0f)
+            if (HUDScript.GameStarted)
             {
-                Time.timeScale = 0.0f;
-                return;
-            }
-            else
-            {
-                Time.timeScale = 1.0f;
+                if (Time.timeScale == 1.0f)
+                {
+                    Time.timeScale = 0.0f;
+                    return;
+                }
+                else
+                {
+                    Time.timeScale = 1.0f;
+                }
             }
         }
 
