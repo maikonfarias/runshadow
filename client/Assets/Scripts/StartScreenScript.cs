@@ -55,7 +55,6 @@ public class StartScreenScript : MonoBehaviour
 
   public Texture2D scoreBGTexture;
 
-
   void Start()
   {   
     isSoundOn = PlayerPrefs.GetInt("Sound", 1) == 1;
@@ -674,8 +673,15 @@ public class StartScreenScript : MonoBehaviour
     var boxPos = new Rect(Screen.width / 2 - buttonSize * 2f, Screen.height / 2 - buttonSize * 0.9f, buttonSize * 4, buttonSize * 2);
     GUI.DrawTexture(boxPos, boxTexture);
 
+    Texture2D quitTexture = Resources.Load("Localized/"+Config.SystemLanguageCode+"/quit_message") as Texture2D;
+    if (quitTexture == null)
+    {
+      // default message is english
+      quitTexture = Resources.Load("Localized/en-us/quit_message") as Texture2D;
+    }
 
-
+    var textPos = new Rect(Screen.width / 2 - buttonSize * 2f, Screen.height / 2 - buttonSize * 0.9f, buttonSize * 4, buttonSize * 2);
+    GUI.DrawTexture(textPos, quitTexture);
 
     var buttonPos = new Rect(Screen.width / 2 - buttonSize * 1f, Screen.height / 2 + buttonSize * .65f, buttonSize * .75f, buttonSize * .75f);        
     GUI.DrawTexture(buttonPos, noTexture);
@@ -685,7 +691,6 @@ public class StartScreenScript : MonoBehaviour
     }
 
     buttonPos = new Rect(Screen.width / 2 + buttonSize * 0.2f, Screen.height / 2 + buttonSize * .65f, buttonSize * .75f, buttonSize * .75f);
-
     GUI.DrawTexture(buttonPos, yesTexture);
     if (GUI.Button(buttonPos, "", new GUIStyle()))
     {
