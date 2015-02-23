@@ -8,7 +8,6 @@ public class StartScreenScript : MonoBehaviour
   public Sprite[] characterSprites;
   public Texture2D[] characterButtons;
   public Texture2D[] mapSkinButtons;
-  //public GameObject selectedSprite;
   public SpriteRenderer selectedRender;
 
   bool isSoundOn = true;
@@ -16,10 +15,10 @@ public class StartScreenScript : MonoBehaviour
   int askUnlockChar = 0;
   List<int> priceForChar = new List<int>();
 
-  //int selectedMapSkin = 0;
   int askUnlockMap = 0;
   List<int> priceForMap = new List<int>();
 
+  bool isPreStart = false;
   bool isOptionsOpen = false;
   bool isAboutOpen = false;
   bool isQuitting = false;
@@ -59,8 +58,6 @@ public class StartScreenScript : MonoBehaviour
   {   
     isSoundOn = PlayerPrefs.GetInt("Sound", 1) == 1;
     selectedCharacter = PlayerPrefs.GetInt("SelectedCharacter", 0);
-    //selectedMapSkin = PlayerPrefs.GetInt("MapSkin", 0);
-    //selectedRender.sprite = characterSprites[selectedCharacter];
 
     priceForChar.Add(0);
     priceForChar.Add(0);
@@ -79,20 +76,6 @@ public class StartScreenScript : MonoBehaviour
     //PlayerPrefs.SetInt("HasChar3", 0);
     //PlayerPrefs.SetInt("HasChar5", 0);
     //PlayerPrefs.SetInt("HasMap2", 0);
-
-  #if UNITY_ANDROID
-    /*refererScreen = PlayerPrefs.GetString("RefererScreen", "");
-    PlayerPrefs.DeleteKey("RefererScreen");
-    //Debug.Log("set ad --referer=" + refererScreen);
-    AdBuddizBinding.SetAndroidPublisherKey("40d5988a-71c6-4cd9-90e1-d536f88adf01");        
-    AdBuddizBinding.CacheAds();
-
-    if (refererScreen == "GameOverScreen" || refererScreen == "GameScreen")
-    {
-        //Debug.Log("show ad");
-        AdBuddizBinding.ShowAd();
-    }*/
-  #endif
   }
 
   void Update()
@@ -100,7 +83,6 @@ public class StartScreenScript : MonoBehaviour
     if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.JoystickButton7))
     {
       HUDScript.GameStarted = true;
-      //Application.LoadLevel(1);
     }
     if (Input.GetKeyDown(KeyCode.JoystickButton6))
     {
@@ -122,47 +104,49 @@ public class StartScreenScript : MonoBehaviour
   {
     if (!HUDScript.GameStarted)
     {
-      DrawTitle();
+      if (isPreStart)
+      {
+        DrawPreStart();
+      }
+      else 
+      {      
+        DrawTitle();
 
-      if(isQuitting)
-      {
-  	    DrawQuitDialog();
-      }
-      else if (isAboutOpen)
-      {
-    	  DrawCredits();
-      }
-      else if (askUnlockChar > 0)
-      {
-        DrawAskUnlockChar();
-      }
-      else if (askUnlockMap > 0)
-      {
-        DrawAskUnlockMap();
-      }
-      else if (isOptionsOpen)
-      {
-        DrawTotalRubies();
-        //DrawStartButton();
-        DrawCharacterSelectionButtons();
-        DrawMapSkinSelectionButtons();
-        //DrawSoundButton();
-        DrawCloseOptionsButton();
-      }
-      else
-      {
-        DrawStartButton();
-        DrawOptionsButton();
-        //DrawControlsTips();                        
-        DrawScoreboardButton();
-        DrawLanguageButton();
+        if (isQuitting)
+        {
+          DrawQuitDialog();
+        }
+        else if (isAboutOpen)
+        {
+          DrawCredits();
+        }
+        else if (askUnlockChar > 0)
+        {
+          DrawAskUnlockChar();
+        }
+        else if (askUnlockMap > 0)
+        {
+          DrawAskUnlockMap();
+        }
+        else if (isOptionsOpen)
+        {
+          DrawTotalRubies();
+          DrawCharacterSelectionButtons();
+          DrawMapSkinSelectionButtons();
+          DrawCloseOptionsButton();
+        }
+        else
+        {
+          DrawStartButton();
+          DrawOptionsButton();                     
+          DrawScoreboardButton();
+          DrawLanguageButton();
+          //DrawAboutButton();
+        }
         DrawAboutButton();
+        DrawSoundButton();
+        DrawQuitButton();
       }
-      DrawSoundButton();
-      DrawQuitButton();
-
-      //DrawCopyright();
-      //DrawVersionNumber();
     }
   }
 
@@ -255,29 +239,10 @@ public class StartScreenScript : MonoBehaviour
     GUI.DrawTexture(buttonPos, titleTexture);
   }
 
-  void DrawControlsTips()
-  {
-    return;
-    //Space/Touch/Click = Jump (Double Jump)
-    //Esc/Back = Pause/Menu
-    //R = Restart Level
-  }
-
-  void DrawCopyright()
-  {
-    GUI.skin.label.fontSize = Screen.height / 30;
-    GUI.Box(new Rect(Screen.width / 2 - 115f, Screen.height - 50,
-                                 240f, 35f), "");
-    GUI.Label(new Rect(Screen.width / 2 - 110f, Screen.height - 45,
-                                    230, 35f), "maikonfarias@gmail.com");
-  }
-
   void DrawAboutButton()
   {
     var buttonSize = Screen.height * 0.2f;
     var buttonPos = new Rect(0, Screen.height - buttonSize , buttonSize, buttonSize);
-    //var buttonPos = new Rect(Screen.width / 2 - buttonSize / 2, Screen.height / 2 - buttonSize * .2f, buttonSize, buttonSize);
-    //var buttonPos = new Rect(0, 0, buttonSize, buttonSize);
     GUI.DrawTexture(buttonPos, aboutbuttonTexture);
 
     if (GUI.Button(buttonPos, "", new GUIStyle()))
@@ -300,22 +265,10 @@ public class StartScreenScript : MonoBehaviour
     GUI.DrawTexture(buttonPos, aboutCreditsTexture);
   }
 
-  void DrawVersionNumber()
-  {
-    GUI.Box(new Rect(Screen.width - 70f, Screen.height - 30f,
-                         170f, 40f), "");
-    GUI.Label(new Rect(Screen.width - 60f, Screen.height - 25f,
-                            160f, 30f), "V. 1.5");
-  }
-
-
   void StartGame()
   {
-    PlayerPrefs.SetInt("Sound", (isSoundOn ? 1 : 0));
-    PlayerPrefs.SetInt("SelectedCharacter", selectedCharacter);
-    //PlayerPrefs.SetInt("MapSkin", selectedMapSkin);
-    HUDScript.GameStarted = true;
-    //Application.LoadLevel(1);
+    //HUDScript.GameStarted = true;
+    isPreStart = true;
   }
 
   void DrawStartButton()
@@ -698,6 +651,27 @@ public class StartScreenScript : MonoBehaviour
       Application.Quit();
     }
 
+  }
+
+  public void DrawPreStart()
+  {
+    var buttonSize = Screen.height * 0.2f;
+    Texture2D quitTexture = Resources.Load("Localized/" + Config.SystemLanguageCode + "/start_message") as Texture2D;
+    if (quitTexture == null)
+    {
+      // default message is english
+      quitTexture = Resources.Load("Localized/en-us/start_message") as Texture2D;
+    }
+
+    var textPos = new Rect(Screen.width / 2 - buttonSize * 4f, Screen.height / 2 - buttonSize * 1.9f, buttonSize * 8, buttonSize * 4);
+    GUI.DrawTexture(textPos, quitTexture);
+
+    var buttonPos = new Rect(0, 0, Screen.width, Screen.height);
+
+    if (GUI.Button(buttonPos, "", new GUIStyle()))
+    {
+      HUDScript.GameStarted = true;
+    }
   }
 
   void DrawLanguageButton()
