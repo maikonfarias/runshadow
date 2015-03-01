@@ -1,1 +1,3 @@
 ﻿你確定要退出遊戲嗎？
+Tap to Jump
+2x Tap to Double Jump

@@ -1,1 +1,3 @@
 ﻿Etes-vous sûr de vouloir quitter ?
+Appuyez pour Sauter
+2x Appuyez pour Double Saut

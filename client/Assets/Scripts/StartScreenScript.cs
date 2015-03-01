@@ -626,12 +626,7 @@ public class StartScreenScript : MonoBehaviour
     var boxPos = new Rect(Screen.width / 2 - buttonSize * 2f, Screen.height / 2 - buttonSize * 0.9f, buttonSize * 4, buttonSize * 2);
     GUI.DrawTexture(boxPos, boxTexture);
 
-    Texture2D quitTexture = Resources.Load("Localized/"+Config.SystemLanguageCode+"/quit_message") as Texture2D;
-    if (quitTexture == null)
-    {
-      // default message is english
-      quitTexture = Resources.Load("Localized/en-us/quit_message") as Texture2D;
-    }
+    Texture2D quitTexture = Config.LocalizedResource("quit_message") as Texture2D;
 
     var textPos = new Rect(Screen.width / 2 - buttonSize * 2f, Screen.height / 2 - buttonSize * 0.9f, buttonSize * 4, buttonSize * 2);
     GUI.DrawTexture(textPos, quitTexture);
@@ -656,15 +651,9 @@ public class StartScreenScript : MonoBehaviour
   public void DrawPreStart()
   {
     var buttonSize = Screen.height * 0.2f;
-    Texture2D quitTexture = Resources.Load("Localized/" + Config.SystemLanguageCode + "/start_message") as Texture2D;
-    if (quitTexture == null)
-    {
-      // default message is english
-      quitTexture = Resources.Load("Localized/en-us/start_message") as Texture2D;
-    }
-
-    var textPos = new Rect(Screen.width / 2 - buttonSize * 4f, Screen.height / 2 - buttonSize * 1.9f, buttonSize * 8, buttonSize * 4);
-    GUI.DrawTexture(textPos, quitTexture);
+    Texture2D tapTexture = Config.LocalizedResource("tap_message") as Texture2D;
+    var textPos = new Rect(Screen.width / 2 - buttonSize * 3.7f, Screen.height / 2 - buttonSize * 2.1f, buttonSize * 7, buttonSize * 4);
+    GUI.DrawTexture(textPos, tapTexture);
 
     var buttonPos = new Rect(0, 0, Screen.width, Screen.height);
 
@@ -676,7 +665,7 @@ public class StartScreenScript : MonoBehaviour
 
   void DrawLanguageButton()
   {
-    return; //TODO do i still need this one?
+    return; //TODO implement Change Language Button
   }
 
 }

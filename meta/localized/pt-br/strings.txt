@@ -1,1 +1,3 @@
 ﻿Tem certeza de que deseja sair?
+Toque para Pular
+2 Toques para Pulo Duplo
