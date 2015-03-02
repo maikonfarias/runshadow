@@ -659,6 +659,7 @@ public class StartScreenScript : MonoBehaviour
 
     if (GUI.Button(buttonPos, "", new GUIStyle()))
     {
+      isPreStart = false;
       HUDScript.GameStarted = true;
     }
   }
