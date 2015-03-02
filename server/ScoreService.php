@@ -2,7 +2,7 @@
 
 class ScoreService {
   
-  const SECRET_KEY = "YOUR-SECRET";
+  const SECRET_KEY = "YOUR-SECRET-KEY";
   
   private $dao;
   

@@ -16,7 +16,7 @@ public static class Config
 
   public static string ServerSecrectKey
   {
-    get { return "YOUR-SERVER-SECRET-KEY"; }
+    get { return "YOUR-SECRET-KEY"; }
   }
 
   public static string SystemLanguageCode
