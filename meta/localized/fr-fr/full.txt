@@ -6,4 +6,4 @@ Caractéristiques:
 - Scores en-ligne
 - De nombreaux personnages et niveaux à débloquer
 
-Nous sommes encore apprentices en matière de développement des jeux. Commentaires et conseils sont bienvenues.
+Nous sommes encore apprentis en matière de développement des jeux. Commentaires et conseils sont bienvenues.
