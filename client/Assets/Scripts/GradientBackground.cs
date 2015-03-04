@@ -49,16 +49,16 @@ public class GradientBackground : MonoBehaviour
         UpdateColors();
 
         gradientLayer = Mathf.Clamp(gradientLayer, 0, 31);
-        if (!camera)
+        if (!GetComponent<Camera>())
         {
             Debug.LogError("Must attach GradientBackground script to the camera");
             return;
         }
 
-        camera.clearFlags = CameraClearFlags.Depth;
-        camera.cullingMask = camera.cullingMask & ~(1 << gradientLayer);
-        Camera gradientCam = new GameObject("Gradient Cam", typeof(Camera)).camera;
-        gradientCam.depth = camera.depth - 1;
+        GetComponent<Camera>().clearFlags = CameraClearFlags.Depth;
+        GetComponent<Camera>().cullingMask = GetComponent<Camera>().cullingMask & ~(1 << gradientLayer);
+        Camera gradientCam = new GameObject("Gradient Cam", typeof(Camera)).GetComponent<Camera>();
+        gradientCam.depth = GetComponent<Camera>().depth - 1;
         gradientCam.cullingMask = 1 << gradientLayer;
 
         backgroundMesh = new Mesh();
@@ -72,7 +72,7 @@ public class GradientBackground : MonoBehaviour
         GameObject gradientPlane = new GameObject("Gradient Plane", typeof(MeshFilter), typeof(MeshRenderer));
 
         ((MeshFilter)gradientPlane.GetComponent(typeof(MeshFilter))).mesh = backgroundMesh;
-        gradientPlane.renderer.material = mat;
+        gradientPlane.GetComponent<Renderer>().material = mat;
         gradientPlane.layer = gradientLayer;
     }
 

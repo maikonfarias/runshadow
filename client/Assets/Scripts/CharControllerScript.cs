@@ -35,20 +35,20 @@ public class CharControllerScript : MonoBehaviour
     {
         //if (PlayerPrefs.GetInt("Sound") == 1)
         {
-            audio.clip = musicSound;
-            audio.volume = 0.2f;
-            audio.Play();
+            GetComponent<AudioSource>().clip = musicSound;
+            GetComponent<AudioSource>().volume = 0.2f;
+            GetComponent<AudioSource>().Play();
         }
     }
     void CheckAudioMute()
     {
         if (Time.timeScale == 0f || PlayerPrefs.GetInt("Sound") == 0)
         {
-            audio.mute = true;
+            GetComponent<AudioSource>().mute = true;
         }
         else
         {
-            audio.mute = false;
+            GetComponent<AudioSource>().mute = false;
         }
     }
 
@@ -57,13 +57,13 @@ public class CharControllerScript : MonoBehaviour
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
         anim.SetBool("Ground", grounded);
 
-        anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
+        anim.SetFloat("vSpeed", GetComponent<Rigidbody2D>().velocity.y);
         
         currentMove = progressiveSpeed;        
 
         anim.SetFloat("Speed", Mathf.Abs(currentMove));
 
-        rigidbody2D.velocity = new Vector2(currentMove * maxSpeed, rigidbody2D.velocity.y);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(currentMove * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
 
         if (currentMove > 0 && !facingRight)
             Flip();
@@ -74,7 +74,7 @@ public class CharControllerScript : MonoBehaviour
 
     void Update()
     {
-        if (!audio.isPlaying && beforeGameStarted != HUDScript.GameStarted)
+        if (!GetComponent<AudioSource>().isPlaying && beforeGameStarted != HUDScript.GameStarted)
         {
             //Debug.Log("play music");
             PlayMusic();
@@ -163,8 +163,8 @@ public class CharControllerScript : MonoBehaviour
         {
             PlaySound(jumpSound);
             anim.SetBool("Ground", false);
-            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, 0);
-            rigidbody2D.AddForce(new Vector2(0, jumpForce));
+            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, 0);
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
 
             if (!grounded)
             {
@@ -189,7 +189,7 @@ public class CharControllerScript : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("Sound") == 1)
         {
-            audio.PlayOneShot(clip, volume);
+            GetComponent<AudioSource>().PlayOneShot(clip, volume);
         }
     }
 

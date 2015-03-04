@@ -13,7 +13,7 @@ public class CameraRunnerScript : MonoBehaviour {
         int currentSkin = PlayerPrefs.GetInt("MapSkin", 0);
         if (currentSkin == 1)
         {
-            camera.backgroundColor = Color.white;
+            GetComponent<Camera>().backgroundColor = Color.white;
         }
         var playerChar = GetPlayerCharacter();
         

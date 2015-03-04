@@ -24,24 +24,24 @@ public class TextureScroller : MonoBehaviour {
     {
         if (PlayerPrefs.GetInt("MapSkin", 0) != 0)
         {            
-            renderer.enabled = false;
+            GetComponent<Renderer>().enabled = false;
         }
         else
         {            
-            renderer.enabled = true;
+            GetComponent<Renderer>().enabled = true;
         }
 
         player = GameObject.FindGameObjectsWithTag("Player")[0];
         if (player != null)
         {
-            if (player.rigidbody2D.velocity.x != 0 && Time.timeScale != 0.0f)
+            if (player.GetComponent<Rigidbody2D>().velocity.x != 0 && Time.timeScale != 0.0f)
             {
                 pos += speed * Time.deltaTime * 2;
                 if (pos > 1.0f)
                 {
                     pos -= 1.0f;
                 }
-                renderer.material.mainTextureOffset = new Vector2(pos, 0);
+                GetComponent<Renderer>().material.mainTextureOffset = new Vector2(pos, 0);
                 //renderer.material.mainTextureOffset = new Vector2((Time.time * speed) % 1, 0f);
             }
         }

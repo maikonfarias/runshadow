@@ -75,7 +75,7 @@ public class GameOverScript : MonoBehaviour
 
         if (PlayerPrefs.GetInt("Sound") == 1 && refererScreen == "GameScreen")
         {
-            audio.PlayOneShot(gameOverSound,0.3f);
+            GetComponent<AudioSource>().PlayOneShot(gameOverSound,0.3f);
         }
         StartCoroutine(GetScores());
     }
