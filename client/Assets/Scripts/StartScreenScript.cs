@@ -626,7 +626,7 @@ public class StartScreenScript : MonoBehaviour
     var boxPos = new Rect(Screen.width / 2 - buttonSize * 2f, Screen.height / 2 - buttonSize * 0.9f, buttonSize * 4, buttonSize * 2);
     GUI.DrawTexture(boxPos, boxTexture);
 
-    Texture2D quitTexture = Config.LocalizedResource("quit_message") as Texture2D;
+    Texture2D quitTexture = Utils.LocalizedTexture2D("quit_message");
 
     var textPos = new Rect(Screen.width / 2 - buttonSize * 2f, Screen.height / 2 - buttonSize * 0.9f, buttonSize * 4, buttonSize * 2);
     GUI.DrawTexture(textPos, quitTexture);
@@ -651,7 +651,7 @@ public class StartScreenScript : MonoBehaviour
   public void DrawPreStart()
   {
     var buttonSize = Screen.height * 0.2f;
-    Texture2D tapTexture = Config.LocalizedResource("tap_message") as Texture2D;
+    Texture2D tapTexture = Utils.LocalizedTexture2D("tap_message");
     var textPos = new Rect(Screen.width / 2 - buttonSize * 3.7f, Screen.height / 2 - buttonSize * 2.1f, buttonSize * 7, buttonSize * 4);
     GUI.DrawTexture(textPos, tapTexture);
 
