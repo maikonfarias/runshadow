@@ -42,4 +42,20 @@ public static class Utils
   {
     return LocalizedResource(path) as Texture2D;
   }
+
+  public static string PlatformDevice
+  {
+    get
+    {
+#if UNITY_WINRT || UNITY_STANDALONE_WIN
+      return "windowsphone";
+#elif UNITY_ANDROID
+      return "android";
+#elif UNITY_IOS || UNITY_STANDALONE_OSX
+      return "ios";
+#else
+      return "webplayer";
+#endif
+    }
+  }
 }

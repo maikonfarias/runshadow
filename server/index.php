@@ -22,10 +22,18 @@ try {
   if(isset($_GET['action'])) {
     
     if ($_GET['action'] == "add") {
+      
+      $device = "";
+      if(isset($_GET['device'])) {
+        $device = $_GET['device'];
+      } else {
+        $device = $service->getDeviceFromUserAgent($_SERVER['HTTP_USER_AGENT']);
+      }
+      
       $score = new Score();
       $score->name = $_GET['name'];
       $score->score = $_GET['score'];
-      $score->device = $service->getDeviceFromUserAgent($_SERVER['HTTP_USER_AGENT']);
+      $score->device = $device;
       $score->isocountrycode = $service->getCountryCodeFromRemoteAddress($_SERVER['REMOTE_ADDR']);
       $score->useragent = $_SERVER['HTTP_USER_AGENT'];
       $score->characterplayed = isset($_GET['char']) ? $_GET['char'] : 0;

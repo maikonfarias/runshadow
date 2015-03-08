@@ -437,7 +437,11 @@ public class GameOverScript : MonoBehaviour
         
         string hash = Md5Sum(name + score + secretKey);
 
-        string post_url = addScoreURL + "name=" + WWW.EscapeURL(name) + "&score=" + score + "&hash=" + hash + "&char=" + (PlayerPrefs.GetInt("SelectedCharacter", 0) + 1);
+        string post_url = addScoreURL + "name=" + WWW.EscapeURL(name) 
+                                      + "&score=" + score 
+                                      + "&hash=" + hash 
+                                      + "&char=" + (PlayerPrefs.GetInt("SelectedCharacter", 0) + 1)
+                                      + "&device=" + Utils.PlatformDevice;
 
         // Post the URL to the site and create a download object to get the result.
         WWW hs_post = new WWW(post_url);
