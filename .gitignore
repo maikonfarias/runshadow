@@ -9,3 +9,4 @@ client/Obj/
 *.userprefs
 *.DS_store
 Thumbs.db.meta
+*.pfx
