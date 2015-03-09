@@ -6,12 +6,12 @@ public static class Config
 
   public static string Version
   {
-    get { return "1.18"; }
+    get { return "1.19"; }
   }
 
   public static float ScoreMultiplier
   {
-    get { return 2.5f; }
+    get { return 2.7f; }
   }
 
   public static string ServerSecrectKey
