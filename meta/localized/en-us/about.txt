@@ -1,0 +1,22 @@
+﻿Version 1.19
+2015
+
+Producer and Lead Programmer
+Maikon Farias Roldão
+http://maikonfarias.com/
+
+Programmers
+Enrique Choynowski Melgarejo
+Jean Farias Roldão
+
+Graphic Designer
+Nanda Passos
+http://nandap-art.tumblr.com/
+
+Music
+DST
+http://www.nosoapradio.us/
+
+Engine
+Unity
+http://unity3d.com/
