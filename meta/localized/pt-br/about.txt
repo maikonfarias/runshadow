@@ -1,11 +1,11 @@
-﻿Version 1.19
+﻿Versão 1.19
 2015
 
-Producer and Lead Programmer
+Produtor e Programador Principal
 Maikon Farias Roldão
 http://maikonfarias.com/
 
-Programmers
+Programadores
 Enrique Choynowski Melgarejo
 Jean Farias Roldão
 
@@ -13,7 +13,7 @@ Designer
 Nanda Passos
 http://nandap-art.tumblr.com/
 
-Music
+Música
 DST
 http://www.nosoapradio.us/
 
