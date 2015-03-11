@@ -1,0 +1,22 @@
+﻿Versión 1.19
+2015
+
+Productor y Desarrollador Principal
+Maikon Farias Roldão
+http://maikonfarias.com/
+
+Desarrolladores
+Enrique Choynowski Melgarejo
+Jean Farias Roldão
+
+Designer
+Nanda Passos
+http://nandap-art.tumblr.com/
+
+Música
+DST
+http://www.nosoapradio.us/
+
+Game Engine
+Unity
+http://unity3d.com/
