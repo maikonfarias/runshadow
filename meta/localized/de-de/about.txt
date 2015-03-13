@@ -1,11 +1,11 @@
-﻿Versão 1.19
+﻿Version 1.19
 2015
 
-Produtor e Desenvolvedor Principal
+Produzent und Haupt Entwickler
 Maikon Farias Roldão
 http://maikonfarias.com/
 
-Desenvolvedores
+Entwickler
 Enrique Choynowski Melgarejo
 Jean Farias Roldão
 
@@ -13,7 +13,7 @@ Designer
 Nanda Passos
 http://nandap-art.tumblr.com/
 
-Música
+Musik
 DST
 http://www.nosoapradio.us/
 

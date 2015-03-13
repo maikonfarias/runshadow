@@ -1,11 +1,11 @@
 ﻿Version 1.19
 2015
 
-Producer and Lead Programmer
+Producer and Main Developer
 Maikon Farias Roldão
 http://maikonfarias.com/
 
-Programmers
+Developers
 Enrique Choynowski Melgarejo
 Jean Farias Roldão
 
