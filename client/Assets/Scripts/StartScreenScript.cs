@@ -662,6 +662,7 @@ public class StartScreenScript : MonoBehaviour
     {
       isPreStart = false;
       HUDScript.GameStarted = true;
+      CharControllerScript.ForceJump = true;
     }
   }
 

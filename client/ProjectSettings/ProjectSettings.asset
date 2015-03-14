@@ -149,7 +149,7 @@ PlayerSettings:
   - m_BuildTarget: Windows Store Apps
     m_StaticBatching: 1
     m_DynamicBatching: 1
-  webPlayerTemplate: APPLICATION:Black Background
+  webPlayerTemplate: APPLICATION:Default
   m_TemplateCustomTags: {}
   actionOnDotNetUnhandledException: 1
   enableInternalProfiler: 0
