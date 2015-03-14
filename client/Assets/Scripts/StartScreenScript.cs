@@ -141,7 +141,6 @@ public class StartScreenScript : MonoBehaviour
           DrawOptionsButton();                     
           DrawScoreboardButton();
           DrawLanguageButton();
-          //DrawAboutButton();
         }
         DrawAboutButton();
         DrawSoundButton();
@@ -263,6 +262,8 @@ public class StartScreenScript : MonoBehaviour
     var buttonSize = Screen.height * 0.2f;
     var buttonPos = new Rect(Screen.width / 2 - buttonSize * 2f, buttonSize * .1f, buttonSize * 4f, buttonSize * 4.8f);
     GUI.DrawTexture(buttonPos, aboutCreditsTexture);
+    var aboutText = Utils.LocalizedTexture2D("about_text");
+    GUI.DrawTexture(buttonPos, aboutText);
   }
 
   void StartGame()
