@@ -1,0 +1,22 @@
+﻿バージョン1.19
+2015
+
+プロデューサーとメイン開発者
+Maikon Farias Roldão
+http://maikonfarias.com/
+
+開発者
+Enrique Choynowski Melgarejo
+Jean Farias Roldão
+
+デザイナー
+Nanda Passos
+http://nandap-art.tumblr.com/
+
+音楽
+DST
+http://www.nosoapradio.us/
+
+ゲームエンジン
+Unity (ユニティ)
+http://unity3d.com/
