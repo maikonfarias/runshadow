@@ -1,0 +1,4 @@
+1.19:
+- Jeu localisée à portugais, espagnol, allemand, français, japonais et chinois.
+- Instructions avant le début du jeu;
+- Correction de bugs;
