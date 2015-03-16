@@ -83,7 +83,7 @@ public class GameOverScript : MonoBehaviour
     void Update()
     {
         screenUpTime += Time.deltaTime*2;
-        if (refererScreen == "GameScreen" && (Input.GetKeyDown(KeyCode.Return) /*|| Input.GetKeyDown(KeyCode.R)*/ || Input.GetKeyDown(KeyCode.JoystickButton7)))
+        if (refererScreen == "GameScreen" && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.JoystickButton7)))
         {
             PlayAgain();
         }
