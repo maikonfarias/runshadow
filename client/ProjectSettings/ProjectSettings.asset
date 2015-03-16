@@ -149,6 +149,9 @@ PlayerSettings:
   - m_BuildTarget: Windows Store Apps
     m_StaticBatching: 1
     m_DynamicBatching: 1
+  - m_BuildTarget: Standalone
+    m_StaticBatching: 1
+    m_DynamicBatching: 1
   webPlayerTemplate: APPLICATION:Default
   m_TemplateCustomTags: {}
   actionOnDotNetUnhandledException: 1
@@ -269,7 +272,7 @@ PlayerSettings:
   metroPackageLogo140: Assets/Sprites/Icons/icon_70.png
   metroPackageLogo180: Assets/Sprites/Icons/icon_90.png
   metroPackageLogo240: Assets/Sprites/Icons/icon_120.png
-  metroPackageVersion: 1.18.0.0
+  metroPackageVersion: 1.19.0.0
   metroCertificatePath: Assets/MetroTestCertificate.pfx
   metroCertificatePassword: EIACGFN
   metroCertificateSubject: Maikon Farias Roldao
@@ -325,7 +328,22 @@ PlayerSettings:
   metroTileBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   metroSplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   metroSplashScreenUseBackgroundColor: 0
-  platformCapabilities: {}
+  platformCapabilities:
+    WindowsStoreApps:
+      EnterpriseAuthentication: False
+      HumanInterfaceDevice: False
+      InternetClient: True
+      InternetClientServer: False
+      Location: False
+      Microphone: False
+      MusicLibrary: False
+      PicturesLibrary: False
+      PrivateNetworkClientServer: False
+      Proximity: False
+      RemovableStorage: False
+      SharedUserCertificates: False
+      VideosLibrary: False
+      WebCam: False
   metroFTAName: 
   metroFTAFileTypes: []
   metroProtocolName: 
