@@ -55,7 +55,7 @@ public class StartScreenScript : MonoBehaviour
   public Texture2D scoreBGTexture;
 
   void Start()
-  {   
+  {
     isSoundOn = PlayerPrefs.GetInt("Sound", 1) == 1;
     selectedCharacter = PlayerPrefs.GetInt("SelectedCharacter", 0);
 
@@ -93,7 +93,7 @@ public class StartScreenScript : MonoBehaviour
     {
       if (!HUDScript.GameStarted)
       {
-  	    isQuitting = !isQuitting;
+        isQuitting = !isQuitting;
       }
     }
   }
@@ -108,8 +108,8 @@ public class StartScreenScript : MonoBehaviour
       {
         DrawPreStart();
       }
-      else 
-      {      
+      else
+      {
         DrawTitle();
 
         if (isQuitting)
@@ -138,7 +138,7 @@ public class StartScreenScript : MonoBehaviour
         else
         {
           DrawStartButton();
-          DrawOptionsButton();                     
+          DrawOptionsButton();
           DrawScoreboardButton();
           DrawLanguageButton();
         }
@@ -174,12 +174,12 @@ public class StartScreenScript : MonoBehaviour
       var buttonPos = new Rect(marginRight4 + letterWidth * 3.5f, marginTop + leterHeight + buttonSize * .2f + buttonSize * .05f, letterWidth, leterHeight);
 
       GUI.DrawTexture(buttonPos, numbersTexture[(int)Char.GetNumericValue(letter)]);
-      
+
       marginRight4 -= letterWidth;
     }
   }
 
-  private void DrawRubiesCost(int cost = 50, Texture2D itemTexture = null) 
+  private void DrawRubiesCost(int cost = 50, Texture2D itemTexture = null)
   {
     var buttonSize = Screen.height * .2f;
     var letterWidth = buttonSize * .2f;
@@ -234,14 +234,14 @@ public class StartScreenScript : MonoBehaviour
   void DrawTitle()
   {
     var buttonSize = Screen.height * 0.2f;
-    var buttonPos = new Rect(Screen.width / 2 - buttonSize*1.5f, Screen.height / 2 - buttonSize * 2.5f, buttonSize*3, buttonSize*1.4f);
+    var buttonPos = new Rect(Screen.width / 2 - buttonSize * 1.5f, Screen.height / 2 - buttonSize * 2.5f, buttonSize * 3, buttonSize * 1.4f);
     GUI.DrawTexture(buttonPos, titleTexture);
   }
 
   void DrawAboutButton()
   {
     var buttonSize = Screen.height * 0.2f;
-    var buttonPos = new Rect(0, Screen.height - buttonSize , buttonSize, buttonSize);
+    var buttonPos = new Rect(0, Screen.height - buttonSize, buttonSize, buttonSize);
     GUI.DrawTexture(buttonPos, aboutbuttonTexture);
 
     if (GUI.Button(buttonPos, "", new GUIStyle()))
@@ -277,7 +277,7 @@ public class StartScreenScript : MonoBehaviour
     var buttonSize = Screen.height * 0.2f;
     var buttonPos = new Rect(Screen.width / 2 - buttonSize / 2, Screen.height / 2 - buttonSize * 1.2f, buttonSize, buttonSize);
     GUI.DrawTexture(buttonPos, playTexture);
-        
+
     if (GUI.Button(buttonPos, "", new GUIStyle()))
     {
       StartGame();
@@ -288,19 +288,20 @@ public class StartScreenScript : MonoBehaviour
   {
     var buttonSize = Screen.height * 0.2f;
     var buttonPos = new Rect(Screen.width / 2 - buttonSize * 2.5f, Screen.height / 2 - buttonSize * 1.2f, buttonSize, buttonSize);
-    
+
     var bgTexture = whiteTexture;
 
-    if(selectedCharacter == 0){
+    if (selectedCharacter == 0)
+    {
       bgTexture = greenTexture;
     }
 
     GUI.DrawTexture(buttonPos, bgTexture);
     GUI.DrawTexture(buttonPos, characterButtons[0]);
     if (GUI.Button(buttonPos, "", new GUIStyle()))
-    {            
+    {
       ChangeCurrentSkin(0);
-        //selectedRender.sprite = characterSprites[0];
+      //selectedRender.sprite = characterSprites[0];
     }
 
 
@@ -308,7 +309,7 @@ public class StartScreenScript : MonoBehaviour
     bgTexture = whiteTexture;
     if (selectedCharacter == 1)
     {
-        bgTexture = greenTexture;
+      bgTexture = greenTexture;
     }
     GUI.DrawTexture(buttonPos, bgTexture);
     GUI.DrawTexture(buttonPos, characterButtons[1]);
@@ -423,8 +424,8 @@ public class StartScreenScript : MonoBehaviour
     selectedCharacter = characterID;
     PlayerPrefs.SetInt("SelectedCharacter", selectedCharacter);
     GetComponent<CameraRunnerScript>().UpdateCurrentCharacterSkin();
-    
-  }   
+
+  }
 
   void DrawMapSkinSelectionButtons()
   {
@@ -497,7 +498,7 @@ public class StartScreenScript : MonoBehaviour
 
     DrawRubiesCost(priceForChar[askUnlockChar]);
 
-    buttonPos = new Rect(Screen.width / 2 + buttonSize * 0.2f, Screen.height / 2 + buttonSize * .65f, buttonSize * .75f, buttonSize * .75f);        
+    buttonPos = new Rect(Screen.width / 2 + buttonSize * 0.2f, Screen.height / 2 + buttonSize * .65f, buttonSize * .75f, buttonSize * .75f);
     var currentMoney = PlayerPrefs.GetInt("MoneyRubies", 0);
     if (currentMoney >= priceForChar[askUnlockChar])
     {
@@ -513,7 +514,7 @@ public class StartScreenScript : MonoBehaviour
       }
     }
 
-    buttonPos = new Rect(Screen.width / 2 - buttonSize * 1f, Screen.height / 2 + buttonSize * .65f, buttonSize * .75f, buttonSize * .75f);                
+    buttonPos = new Rect(Screen.width / 2 - buttonSize * 1f, Screen.height / 2 + buttonSize * .65f, buttonSize * .75f, buttonSize * .75f);
     GUI.DrawTexture(buttonPos, noTexture);
     if (GUI.Button(buttonPos, "", new GUIStyle()))
     {
@@ -548,7 +549,7 @@ public class StartScreenScript : MonoBehaviour
       }
     }
 
-    buttonPos = new Rect(Screen.width / 2 - buttonSize * 1f, Screen.height / 2 + buttonSize * .65f, buttonSize * .75f, buttonSize * .75f);        
+    buttonPos = new Rect(Screen.width / 2 - buttonSize * 1f, Screen.height / 2 + buttonSize * .65f, buttonSize * .75f, buttonSize * .75f);
     GUI.DrawTexture(buttonPos, noTexture);
     if (GUI.Button(buttonPos, "", new GUIStyle()))
     {
@@ -565,7 +566,7 @@ public class StartScreenScript : MonoBehaviour
 
     if (GUI.Button(buttonPos, "", new GUIStyle()))
     {
-      isSoundOn = !isSoundOn;  
+      isSoundOn = !isSoundOn;
       PlayerPrefs.SetInt("Sound", (isSoundOn ? 1 : 0));
     }
   }
@@ -603,7 +604,7 @@ public class StartScreenScript : MonoBehaviour
     {
       PlayerPrefs.SetString("RefererScreen", "StartScreen");
       Application.LoadLevel(1);
-    }        
+    }
   }
 
   void DrawQuitButton()
@@ -612,12 +613,12 @@ public class StartScreenScript : MonoBehaviour
     if (Application.platform != RuntimePlatform.WindowsWebPlayer && Application.platform != RuntimePlatform.OSXWebPlayer)
     {
       var buttonSize = Screen.height * 0.2f;
-      var buttonPos = new Rect(Screen.width - buttonSize , 0, buttonSize, buttonSize);
+      var buttonPos = new Rect(Screen.width - buttonSize, 0, buttonSize, buttonSize);
       GUI.DrawTexture(buttonPos, quitTexture);
       if (GUI.Button(buttonPos, "", new GUIStyle()))
       {
         isQuitting = !isQuitting;
-      }       
+      }
     }
   }
 
@@ -632,7 +633,7 @@ public class StartScreenScript : MonoBehaviour
     var textPos = new Rect(Screen.width / 2 - buttonSize * 2f, Screen.height / 2 - buttonSize * 0.9f, buttonSize * 4, buttonSize * 2);
     GUI.DrawTexture(textPos, quitTexture);
 
-    var buttonPos = new Rect(Screen.width / 2 - buttonSize * 1f, Screen.height / 2 + buttonSize * .65f, buttonSize * .75f, buttonSize * .75f);        
+    var buttonPos = new Rect(Screen.width / 2 - buttonSize * 1f, Screen.height / 2 + buttonSize * .65f, buttonSize * .75f, buttonSize * .75f);
     GUI.DrawTexture(buttonPos, noTexture);
     if (GUI.Button(buttonPos, "", new GUIStyle()))
     {

@@ -1,31 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PowerupScript : MonoBehaviour 
+public class PowerupScript : MonoBehaviour
 {
-    public AudioClip coinSound;
-    GameObject mainCamera;
-    public GameObject renderClone;
+  public AudioClip coinSound;
+  GameObject mainCamera;
+  public GameObject renderClone;
 
-    void Start()
+  void Start()
+  {
+    mainCamera = GameObject.Find("Main Camera");
+  }
+  void OnTriggerEnter2D(Collider2D other)
+  {
+    if (other.tag == "Player")
     {
-        mainCamera = GameObject.Find("Main Camera");
-    }
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Player") 
-        {
-            if (PlayerPrefs.GetInt("Sound") == 1)
-            {                
-                mainCamera.GetComponent<AudioSource>().PlayOneShot(coinSound, 1f);
-            }
-            mainCamera.GetComponent<HUDScript>().AddRubies(1);
+      if (PlayerPrefs.GetInt("Sound") == 1)
+      {
+        mainCamera.GetComponent<AudioSource>().PlayOneShot(coinSound, 1f);
+      }
+      mainCamera.GetComponent<HUDScript>().AddRubies(1);
 
-            var spriteImage = GetComponent<SpriteRenderer>().sprite;
-            var newObj = (GameObject)Instantiate(renderClone, transform.position, Quaternion.identity);
-            newObj.GetComponent<SpriteRenderer>().sprite = spriteImage;
+      var spriteImage = GetComponent<SpriteRenderer>().sprite;
+      var newObj = (GameObject)Instantiate(renderClone, transform.position, Quaternion.identity);
+      newObj.GetComponent<SpriteRenderer>().sprite = spriteImage;
 
-            Destroy(this.gameObject);
-        }
+      Destroy(this.gameObject);
     }
+  }
 }

@@ -1,29 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SelectSkinScript : MonoBehaviour {
-    public bool realTimeUpdate = false;
-    public Sprite[] skins;
-    void Start () 
-    {
-          UpdateSkin();
-    }
+public class SelectSkinScript : MonoBehaviour
+{
+  public bool realTimeUpdate = false;
+  public Sprite[] skins;
+  void Start()
+  {
+    UpdateSkin();
+  }
 
-    void UpdateSkin()
+  void UpdateSkin()
+  {
+    int currentSkin = PlayerPrefs.GetInt("MapSkin", 0);
+    if (skins.GetLength(0) > currentSkin)
     {
-        int currentSkin = PlayerPrefs.GetInt("MapSkin", 0);
-        if (skins.GetLength(0) > currentSkin)
-        {
-            GetComponent<SpriteRenderer>().sprite = skins[currentSkin];
-        }
+      GetComponent<SpriteRenderer>().sprite = skins[currentSkin];
     }
-	
-	// Update is called once per frame
-    void Update () 
+  }
+
+  // Update is called once per frame
+  void Update()
+  {
+    if (realTimeUpdate)
     {
-        if (realTimeUpdate)
-        {
-            UpdateSkin();
-        }
+      UpdateSkin();
     }
+  }
 }

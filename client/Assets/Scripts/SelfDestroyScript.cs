@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SelfDestroyScript : MonoBehaviour {
+public class SelfDestroyScript : MonoBehaviour
+{
+  public float time = 5f;
 
-    public float time = 5f;
-	
-    void Start () 
-    {
-        Destroy(gameObject, time);
-    }
+  void Start()
+  {
+    Destroy(gameObject, time);
+  }
 }
