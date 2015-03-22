@@ -7,8 +7,13 @@ Source code for the game Run Shadow for mobile devices.
 - Client Unity3d C#;
 - Server PHP with MySQL;
 
-Screenshot:
-![Run Shadow Screenshot](http://maikonfarias.com/blog/wp-content/uploads/2014/08/Screenshot_2014-08-31-19-45-51.png)
+Screenshots:<br />
+<a href="http://maikonfarias.com/blog/wp-content/uploads/2015/01/Screenshot_2015-01-15-02-28-56.png"><img class="alignnone wp-image-312" src="http://maikonfarias.com/blog/wp-content/uploads/2015/01/Screenshot_2015-01-15-02-28-56.png" width="300" height="169" /></a>
+<a href="http://maikonfarias.com/blog/wp-content/uploads/2015/03/German_instructions.png"><img class="alignnone wp-image-310" src="http://maikonfarias.com/blog/wp-content/uploads/2015/03/German_instructions.png" width="300" height="169" /></a>
+<a href="http://maikonfarias.com/blog/wp-content/uploads/2014/08/Screenshot_2014-08-31-19-45-51.png"><img class="alignnone wp-image-310" src="http://maikonfarias.com/blog/wp-content/uploads/2014/08/Screenshot_2014-08-31-19-45-51.png" width="300" height="169" /></a>
+<a href="http://maikonfarias.com/blog/wp-content/uploads/2015/01/Screenshot_2015-01-15-02-29-01.png"><img class="alignnone wp-image-313" src="http://maikonfarias.com/blog/wp-content/uploads/2015/01/Screenshot_2015-01-15-02-29-01.png" width="300" height="169" /></a>
+<a href="http://maikonfarias.com/blog/wp-content/uploads/2015/01/Screenshot_2015-01-15-02-29-25.png"><img class="alignnone wp-image-314" src="http://maikonfarias.com/blog/wp-content/uploads/2015/01/Screenshot_2015-01-15-02-29-25.png" width="300" height="169" /></a>
+<a href="http://maikonfarias.com/blog/wp-content/uploads/2015/01/Screenshot_2015-01-15-02-29-33.png"><img class="alignnone wp-image-315" src="http://maikonfarias.com/blog/wp-content/uploads/2015/01/Screenshot_2015-01-15-02-29-33.png" width="300" height="169" /></a>
 
 Links to download:
 
