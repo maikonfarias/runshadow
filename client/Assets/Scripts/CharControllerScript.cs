@@ -27,57 +27,21 @@ public class CharControllerScript : MonoBehaviour
   {
     mainCamera = GameObject.Find("Main Camera");
     anim = GetComponent<Animator>();
-    //audio.Play(musicSound, 0.3f);
     CheckAudioMute();
-
-    //Invoke("PlayMusic", .2f);
-
-  }
-
-  public void PlayMusic()
-  {
-    //if (PlayerPrefs.GetInt("Sound") == 1)
-    {
-      mainCamera.GetComponent<AudioSource>().clip = musicSound;
-      mainCamera.GetComponent<AudioSource>().volume = 0.2f;
-      mainCamera.GetComponent<AudioSource>().Play();
-    }
-  }
-  void CheckAudioMute()
-  {
-    if (Time.timeScale == 0f || PlayerPrefs.GetInt("Sound") == 0)
-    {
-      mainCamera.GetComponent<AudioSource>().mute = true;
-    }
-    else
-    {
-      mainCamera.GetComponent<AudioSource>().mute = false;
-    }
   }
 
   void FixedUpdate()
   {
-    grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
-    anim.SetBool("Ground", grounded);
-
-    anim.SetFloat("vSpeed", GetComponent<Rigidbody2D>().velocity.y);
-
-    currentMove = progressiveSpeed;
-
-    anim.SetFloat("Speed", Mathf.Abs(currentMove));
-
-    GetComponent<Rigidbody2D>().velocity = new Vector2(currentMove * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
+    UpdatePhysics();
   }
 
   void Update()
   {
     if (!mainCamera.GetComponent<AudioSource>().isPlaying && beforeGameStarted != HUDScript.GameStarted)
     {
-      //Debug.Log("play music");
       PlayMusic();
       beforeGameStarted = HUDScript.GameStarted;
     }
-
 
     if (HUDScript.GameStarted)
     {
@@ -85,91 +49,34 @@ public class CharControllerScript : MonoBehaviour
     }
 
     CheckAudioMute();
+    ProccessKeys();
 
-    if (Input.GetKeyDown(KeyCode.Escape) || (Input.GetKeyDown(KeyCode.JoystickButton7)))
+    if (!Utils.GamePaused)
     {
-      if (HUDScript.GameStarted)
+      if ((grounded || !doubleJump) && (TouchedTheScreen() || ForceJump) && HUDScript.GameStarted)
       {
-        if (Time.timeScale == 1.0f)
+        Jump();
+
+        if (!grounded)
         {
-          Time.timeScale = 0.0f;
-          return;
-        }
-        else
-        {
-          Time.timeScale = 1.0f;
+          doubleJump = true;
         }
       }
-    }
-
-    if (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.JoystickButton3))
-    {
-      Time.timeScale = 1.0f;
-      HUDScript.GameStarted = true;
-      Application.LoadLevel(Application.loadedLevel);
-      return;
-    }
-
-    if (Input.GetKeyDown(KeyCode.JoystickButton6) && Time.timeScale == 0f)
-    {
-      Time.timeScale = 1.0f;
-      HUDScript.GameStarted = false;
-      Application.LoadLevel(Application.loadedLevel);
-      return;
-    }
-
-    if (Time.timeScale != 1.0f)
-    {
-      return;
-    }
-
-    bool touchedScreen = false;
-    foreach (var T in Input.touches)
-    {
-      //var P = T.position; // touch pos
-      if (T.phase == TouchPhase.Began)
+      if (grounded)
       {
-        var buttonSize = Screen.height * 0.2f;
-        var buttonPos = new Rect(buttonSize / 4, buttonSize / 4, buttonSize, buttonSize);
-        if (buttonPos.Contains(T.position))
-        {
-          touchedScreen = true;
-        }
+        doubleJump = false;
       }
     }
+  }
 
-    bool pressedGamepad = false;
-    if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.JoystickButton1) || Input.GetKeyDown(KeyCode.JoystickButton2)
-        || Input.GetKeyDown(KeyCode.JoystickButton4) || Input.GetKeyDown(KeyCode.JoystickButton5))
-    {
-      pressedGamepad = true;
-    }
-
-    bool clickedMouse = false;
-    if (Input.GetMouseButtonDown(0))
-    {
-      var buttonSize = Screen.height * 0.2f;
-      var buttonPos = new Rect(buttonSize / 4, buttonSize / 4, buttonSize, buttonSize);
-      if (!buttonPos.Contains(new Vector2(Input.mousePosition.x, Screen.height - Input.mousePosition.y)))
-      {
-        clickedMouse = true;
-      }
-    }
-
-    // if pressed any button/click/touch
-    if ((grounded || !doubleJump) && (Input.GetKeyDown(KeyCode.Space) || clickedMouse || touchedScreen || pressedGamepad || ForceJump) && HUDScript.GameStarted)
-    {
-      Jump();
-
-      if (!grounded)
-      {
-        doubleJump = true;
-      }
-    }
-    if (grounded)
-    {
-      doubleJump = false;
-    }
+  void UpdatePhysics()
+  {
+    grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
+    anim.SetBool("Ground", grounded);
+    anim.SetFloat("vSpeed", GetComponent<Rigidbody2D>().velocity.y);
+    currentMove = progressiveSpeed;
+    anim.SetFloat("Speed", Mathf.Abs(currentMove));
+    GetComponent<Rigidbody2D>().velocity = new Vector2(currentMove * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
   }
 
   void Jump()
@@ -189,18 +96,99 @@ public class CharControllerScript : MonoBehaviour
     }
   }
 
+  public void PlayMusic()
+  {
+    mainCamera.GetComponent<AudioSource>().clip = musicSound;
+    mainCamera.GetComponent<AudioSource>().volume = 0.2f;
+    mainCamera.GetComponent<AudioSource>().Play();
+  }
+
+  void CheckAudioMute()
+  {
+    if (Utils.GamePaused || PlayerPrefs.GetInt("Sound") == 0)
+    {
+      mainCamera.GetComponent<AudioSource>().mute = true;
+    }
+    else
+    {
+      mainCamera.GetComponent<AudioSource>().mute = false;
+    }
+  }
+
   void OnApplicationPause(bool pauseStatus)
   {
     if (pauseStatus && HUDScript.GameStarted)
     {
-      Time.timeScale = 0.0f;
+      Utils.GamePaused = true;
     }
   }
 
-  void OnGUI()
+  bool TouchedTheScreen()
   {
-    //GUI.Box(new Rect(0, 0, 250, 50), "progressiveSpeed: " + progressiveSpeed.ToString());
+    foreach (var T in Input.touches)
+    {
+      //var P = T.position; // touch pos
+      if (T.phase == TouchPhase.Began)
+      {
+        var buttonSize = Screen.height * 0.2f;
+        var buttonPos = new Rect(buttonSize / 4, buttonSize / 4, buttonSize, buttonSize);
+        if (buttonPos.Contains(T.position))
+        {
+          //touch
+          return true;
+        }
+      }
+    }
+
+    if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.JoystickButton1) || Input.GetKeyDown(KeyCode.JoystickButton2)
+        || Input.GetKeyDown(KeyCode.JoystickButton4) || Input.GetKeyDown(KeyCode.JoystickButton5))
+    {
+      //joystick
+      return true;
+    }
+
+    if (Input.GetMouseButtonDown(0))
+    {
+      var buttonSize = Screen.height * 0.2f;
+      var buttonPos = new Rect(buttonSize / 4, buttonSize / 4, buttonSize, buttonSize);
+      if (!buttonPos.Contains(new Vector2(Input.mousePosition.x, Screen.height - Input.mousePosition.y)))
+      {
+        //clicked
+        return true;
+      }
+    }
+    if (Input.GetKeyDown(KeyCode.Space))
+    {
+      //keyboard
+      return true;
+    }
+    return false;
   }
 
+  void ProccessKeys()
+  {
+    if (Input.GetKeyDown(KeyCode.Escape) || (Input.GetKeyDown(KeyCode.JoystickButton7)))
+    {
+      if (HUDScript.GameStarted)
+      {
+        Utils.GamePaused = !Utils.GamePaused;
+      }
+    }
 
+    if (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.JoystickButton3))
+    {
+      Utils.GamePaused = false;
+      HUDScript.GameStarted = true;
+      Application.LoadLevel(Application.loadedLevel);
+      return;
+    }
+
+    if (Input.GetKeyDown(KeyCode.JoystickButton6) && Utils.GamePaused)
+    {
+      Utils.GamePaused = false;
+      HUDScript.GameStarted = false;
+      Application.LoadLevel(Application.loadedLevel);
+      return;
+    }
+  }
 }

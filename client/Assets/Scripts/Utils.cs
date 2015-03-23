@@ -58,4 +58,16 @@ public static class Utils
 #endif
     }
   }
+
+  public static bool GamePaused
+  {
+    get
+    {      
+      return Time.timeScale == 0.0f;
+    }
+    set
+    {
+      Time.timeScale = value ? 0.0f : 1.0f;
+    }
+  }
 }
