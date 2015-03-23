@@ -82,7 +82,7 @@ public class StartScreenScript : MonoBehaviour
   {
     if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.JoystickButton7))
     {
-      HUDScript.GameStarted = true;
+      Game.Started = true;
     }
     if (Input.GetKeyDown(KeyCode.JoystickButton6))
     {
@@ -91,7 +91,7 @@ public class StartScreenScript : MonoBehaviour
     }
     if (Input.GetKeyDown(KeyCode.Escape))
     {
-      if (!HUDScript.GameStarted)
+      if (!Game.Started)
       {
         isQuitting = !isQuitting;
       }
@@ -102,7 +102,7 @@ public class StartScreenScript : MonoBehaviour
 
   void OnGUI()
   {
-    if (!HUDScript.GameStarted)
+    if (!Game.Started)
     {
       if (isPreStart)
       {
@@ -662,7 +662,7 @@ public class StartScreenScript : MonoBehaviour
     if (GUI.Button(buttonPos, "", new GUIStyle()))
     {
       isPreStart = false;
-      HUDScript.GameStarted = true;
+      Game.Started = true;
       CharControllerScript.ForceJump = true;
     }
   }

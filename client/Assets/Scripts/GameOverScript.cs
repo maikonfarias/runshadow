@@ -176,21 +176,13 @@ public class GameOverScript : MonoBehaviour
 
   void PlayAgain()
   {
-    HUDScript.GameStarted = true;
+    Game.Started = true;
     Application.LoadLevel(0);
   }
 
   void GoToStartScreen()
   {
-    if (refererScreen == "StartScreen")
-    {
-      PlayerPrefs.SetString("RefererScreen", "ScoreBoardScreen");
-    }
-    else
-    {
-      PlayerPrefs.SetString("RefererScreen", "GameOverScreen");
-    }
-    HUDScript.GameStarted = false;
+    Game.Started = false;
     Application.LoadLevel(0);
   }
 

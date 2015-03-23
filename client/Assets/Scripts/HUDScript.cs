@@ -4,7 +4,6 @@ using System;
 
 public class HUDScript : MonoBehaviour
 {
-  public static bool GameStarted = false;
   string textTime = "";
   float floatTime = 0f;
   int rubies;
@@ -45,7 +44,7 @@ public class HUDScript : MonoBehaviour
 
   void Update()
   {
-    if (GameStarted)
+    if (Game.Started)
     {
       playerScore += Time.deltaTime * Config.ScoreMultiplier;
       floatTime += Time.deltaTime;
@@ -86,11 +85,11 @@ public class HUDScript : MonoBehaviour
   {
     //TestFunction();
 
-    if (GameStarted)
+    if (Game.Started)
     {
       DrawScoreHUD();
 
-      if (Time.timeScale == 1.0f)
+      if (!Game.Paused)
       {
         var buttonSize = Screen.height * 0.2f;
         var buttonPos = new Rect(buttonSize / 4, buttonSize / 4, buttonSize, buttonSize);
@@ -98,7 +97,7 @@ public class HUDScript : MonoBehaviour
 
         if (GUI.Button(buttonPos, "", new GUIStyle()))
         {
-          Time.timeScale = 0.0f;
+          Game.Paused = true;
         }
       }
       else
@@ -111,7 +110,7 @@ public class HUDScript : MonoBehaviour
 
         if (GUI.Button(buttonPos, "", new GUIStyle()))
         {
-          Time.timeScale = 1.0f;
+          Game.Paused = false;
         }
 
         buttonPos = new Rect(buttonSize / 4, buttonSize * 1.25f, buttonSize, buttonSize);
@@ -119,8 +118,8 @@ public class HUDScript : MonoBehaviour
 
         if (GUI.Button(buttonPos, "", new GUIStyle()))
         {
-          Time.timeScale = 1.0f;
-          GameStarted = true;
+          Game.Paused = false;
+          Game.Started = true;
           Application.LoadLevel(Application.loadedLevel);
         }
 
@@ -139,9 +138,8 @@ public class HUDScript : MonoBehaviour
 
         if (GUI.Button(buttonPos, "", new GUIStyle()))
         {
-          Time.timeScale = 1.0f;
-          //PlayerPrefs.SetString("RefererScreen", "GameScreen");
-          GameStarted = false;
+          Game.Paused = false;
+          Game.Started = false;
           Application.LoadLevel(0);
         }
       }
@@ -176,7 +174,7 @@ public class HUDScript : MonoBehaviour
 
     if (GUI.Button(buttonPos, "play"))
     {
-      GameStarted = true;
+      Game.Started = true;
     }
 
   }

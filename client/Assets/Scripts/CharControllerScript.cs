@@ -37,13 +37,13 @@ public class CharControllerScript : MonoBehaviour
 
   void Update()
   {
-    if (!mainCamera.GetComponent<AudioSource>().isPlaying && beforeGameStarted != HUDScript.GameStarted)
+    if (!mainCamera.GetComponent<AudioSource>().isPlaying && beforeGameStarted != Game.Started)
     {
       PlayMusic();
-      beforeGameStarted = HUDScript.GameStarted;
+      beforeGameStarted = Game.Started;
     }
 
-    if (HUDScript.GameStarted)
+    if (Game.Started)
     {
       progressiveSpeed += Time.deltaTime / 400;
     }
@@ -51,9 +51,9 @@ public class CharControllerScript : MonoBehaviour
     CheckAudioMute();
     ProccessKeys();
 
-    if (!Utils.GamePaused)
+    if (!Game.Paused)
     {
-      if ((grounded || !doubleJump) && (TouchedTheScreen() || ForceJump) && HUDScript.GameStarted)
+      if ((grounded || !doubleJump) && (TouchedTheScreen() || ForceJump) && Game.Started)
       {
         Jump();
 
@@ -105,7 +105,7 @@ public class CharControllerScript : MonoBehaviour
 
   void CheckAudioMute()
   {
-    if (Utils.GamePaused || PlayerPrefs.GetInt("Sound") == 0)
+    if (Game.Paused || PlayerPrefs.GetInt("Sound") == 0)
     {
       mainCamera.GetComponent<AudioSource>().mute = true;
     }
@@ -117,9 +117,9 @@ public class CharControllerScript : MonoBehaviour
 
   void OnApplicationPause(bool pauseStatus)
   {
-    if (pauseStatus && HUDScript.GameStarted)
+    if (pauseStatus && Game.Started)
     {
-      Utils.GamePaused = true;
+      Game.Paused = true;
     }
   }
 
@@ -169,24 +169,24 @@ public class CharControllerScript : MonoBehaviour
   {
     if (Input.GetKeyDown(KeyCode.Escape) || (Input.GetKeyDown(KeyCode.JoystickButton7)))
     {
-      if (HUDScript.GameStarted)
+      if (Game.Started)
       {
-        Utils.GamePaused = !Utils.GamePaused;
+        Game.Paused = !Game.Paused;
       }
     }
 
     if (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.JoystickButton3))
     {
-      Utils.GamePaused = false;
-      HUDScript.GameStarted = true;
+      Game.Paused = false;
+      Game.Started = true;
       Application.LoadLevel(Application.loadedLevel);
       return;
     }
 
-    if (Input.GetKeyDown(KeyCode.JoystickButton6) && Utils.GamePaused)
+    if (Input.GetKeyDown(KeyCode.JoystickButton6) && Game.Paused)
     {
-      Utils.GamePaused = false;
-      HUDScript.GameStarted = false;
+      Game.Paused = false;
+      Game.Started = false;
       Application.LoadLevel(Application.loadedLevel);
       return;
     }

@@ -24,7 +24,7 @@ public class SpawnScript : MonoBehaviour
 
   void Spawn()
   {
-    if ((HUDScript.GameStarted && spawnDuringGame) || (!HUDScript.GameStarted && spawnAtStart))
+    if ((Game.Started && spawnDuringGame) || (!Game.Started && spawnAtStart))
     {
       Instantiate(obj[Random.Range(0, obj.GetLength(0))], transform.position, Quaternion.identity);
     }
