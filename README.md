@@ -28,3 +28,7 @@ http://www.windowsphone.com/pt-br/store/app/run-shadow/7b9f263d-1985-42c3-b053-e
 
 Windows 8 App:
 http://apps.microsoft.com/windows/app/run-shadow/5846a200-f50d-4439-8bb0-1215aed1e9b4
+
+
+My Blog:<br />
+http://maikonfarias.com/blog
