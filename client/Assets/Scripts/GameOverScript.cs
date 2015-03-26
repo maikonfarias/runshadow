@@ -425,7 +425,7 @@ public class GameOverScript : MonoBehaviour
     string secretKey = Config.ServerSecrectKey;
 
     // Server Address
-    string addScoreURL = "http://maikonfarias.com/unity/runner/score_server?action=add&"; // TODO put this on the config file
+    string addScoreURL = Config.ServerAddress + "?action=add&"; // TODO put this on the config file
 
     string hash = Md5Sum(name + score + secretKey);
 
@@ -457,7 +457,7 @@ public class GameOverScript : MonoBehaviour
   IEnumerator GetScores()
   {
     loadingScoreStatus = 1;
-    string highscoreURL = "http://maikonfarias.com/unity/runner/score_server?action=list";
+    string highscoreURL = Config.ServerAddress + "?action=list";
 
     highscoreURL += "&version=" + Config.Version;
     highscoreURL += "&format=json";

@@ -18,4 +18,9 @@ public static class Config
   {
     get { return "YOUR-SECRET-KEY"; }
   }
+
+  public static string ServerAddress
+  {
+    get { return "http://maikonfarias.com/unity/runner/score_server"; }
+  }
 }
