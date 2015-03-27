@@ -23,4 +23,19 @@ public static class Config
   {
     get { return "http://maikonfarias.com/unity/runner/score_server"; }
   }
+  
+  public static string FacebookShareLink
+  {
+    get { return "http://www.facebook.com/sharer/sharer.php?u=maikonfarias.com/unity/runner/"; }
+  }
+  
+  public static string TwitterShareLink
+  {
+    get { return "http://twitter.com/home?status=Run%20Shadow%20Game%20http://maikonfarias.com/unity/runner/"; }
+  }
+  
+  public static string GooglePlusShareLink
+  {
+    get { return "https://plus.google.com/share?url=maikonfarias.com/unity/runner/"; }
+  }
 }

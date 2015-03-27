@@ -140,7 +140,7 @@ public class GameOverScript : MonoBehaviour
       {
         if (screenUpTime > 0.5f)
         {
-          OpenNewUrl("http://www.facebook.com/sharer/sharer.php?u=maikonfarias.com/unity/runner/");
+          OpenNewUrl(Config.FacebookShareLink);
         }
       }
       buttonPos = new Rect(Screen.width - buttonSize * 1.125f, Screen.height / 2 - buttonSize * .25f, buttonSize * .75f, buttonSize * .75f);
@@ -149,7 +149,7 @@ public class GameOverScript : MonoBehaviour
       {
         if (screenUpTime > 0.5f)
         {
-          OpenNewUrl("http://twitter.com/home?status=Run%20Shadow%20Game%20http://maikonfarias.com/unity/runner/");
+          OpenNewUrl(Config.TwitterShareLink);
         }
       }
       buttonPos = new Rect(Screen.width - buttonSize * 1.125f, Screen.height / 2 - buttonSize * 1.0f, buttonSize * .75f, buttonSize * .75f);
@@ -158,7 +158,7 @@ public class GameOverScript : MonoBehaviour
       {
         if (screenUpTime > 0.5f)
         {
-          OpenNewUrl("https://plus.google.com/share?url=maikonfarias.com/unity/runner/");
+          OpenNewUrl(Config.GooglePlusShareLink);
         }
       }
     }
