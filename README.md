@@ -1,11 +1,20 @@
 Run Shadow
 =========
 
-Endless Running game using Unity engine, playing Shadow as main character.
-
 Source code for the game Run Shadow for mobile devices.
 - Client Unity3d C#;
 - Server PHP with MySQL;
+
+Run Shadow is an Endless Runner game made with Unity, playing Shadow as main character.
+
+Features:
+- Challenging, randomised maps
+- Beautiful 2D graphics
+- Simple controls
+- Online Highscores
+- Many Characters and Maps to unlock
+
+We are still learning game development, feedback and tips are welcome.
 
 Screenshots:<br />
 <a href="http://maikonfarias.com/blog/wp-content/uploads/2015/01/Screenshot_2015-01-15-02-28-56.png"><img class="alignnone wp-image-312" src="http://maikonfarias.com/blog/wp-content/uploads/2015/01/Screenshot_2015-01-15-02-28-56.png" width="300" height="169" /></a>
