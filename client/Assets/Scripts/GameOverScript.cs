@@ -323,6 +323,7 @@ public class GameOverScript : MonoBehaviour
     int scorePosition = 1;
     foreach (var scoreRow in scoreList)
     {
+#if !UNITY_IOS
       Texture2D playerDevice = null;
       if (scoreRow.Device == "ios")
       {
@@ -345,6 +346,7 @@ public class GameOverScript : MonoBehaviour
       {
         GUI.DrawTexture(new Rect(marginRight2, marginTop, lineHeight, lineHeight), playerDevice);
       }
+#endif
       if (!string.IsNullOrEmpty(scoreRow.ISOCountryCode) && scoreRow.ISOCountryCode != "null")
       {
         Texture2D myTexture = Resources.Load("Flags/" + scoreRow.ISOCountryCode.ToLower()) as Texture2D;
