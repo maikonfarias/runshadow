@@ -287,11 +287,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2089d39d3b2d9e447bf5e1c8943fd983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &466934712
+--- !u!4 &466934712 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: f574c136e84e7ef4e9a8502f04c30156, type: 2}
   m_PrefabInternal: {fileID: 1935332308}
---- !u!4 &474640856
+--- !u!4 &474640856 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 0ef5afdcbc36f98498abbc982a967e7e, type: 2}
   m_PrefabInternal: {fileID: 1500011008}
@@ -451,7 +451,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ef5afdcbc36f98498abbc982a967e7e, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &678020531
+--- !u!4 &678020531 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 6e18e34ceab206b42b8a69601f276977, type: 2}
   m_PrefabInternal: {fileID: 26566142}
@@ -869,7 +869,7 @@ MonoBehaviour:
   aboutbuttonTexture: {fileID: 2800000, guid: 61b1f32c01eb6b64b9a8b4677c9b1ef7, type: 3}
   aboutCreditsTexture: {fileID: 2800000, guid: 84015047e8e9f594981ad4d2869de6f4, type: 3}
   scoreBGTexture: {fileID: 2800000, guid: 4a40490c3be888245b71002f761446bc, type: 3}
---- !u!4 &1052081095
+--- !u!4 &1052081095 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: f574c136e84e7ef4e9a8502f04c30156, type: 2}
   m_PrefabInternal: {fileID: 1758717397}
@@ -915,7 +915,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fa160484e1547b4490431b335eceb97, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1412831624
+--- !u!4 &1412831624 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 0ef5afdcbc36f98498abbc982a967e7e, type: 2}
   m_PrefabInternal: {fileID: 569000325}
@@ -1205,15 +1205,15 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f574c136e84e7ef4e9a8502f04c30156, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1826515030
+--- !u!4 &1826515030 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: f574c136e84e7ef4e9a8502f04c30156, type: 2}
   m_PrefabInternal: {fileID: 107686683}
---- !u!1 &1876943808
+--- !u!1 &1876943808 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 0ef5afdcbc36f98498abbc982a967e7e, type: 2}
   m_PrefabInternal: {fileID: 726433558}
---- !u!4 &1876943809
+--- !u!4 &1876943809 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 0ef5afdcbc36f98498abbc982a967e7e, type: 2}
   m_PrefabInternal: {fileID: 726433558}
