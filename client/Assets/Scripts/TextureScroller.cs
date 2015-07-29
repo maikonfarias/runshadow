@@ -34,15 +34,19 @@ public class TextureScroller : MonoBehaviour
     player = GameObject.FindGameObjectsWithTag("Player")[0];
     if (player != null)
     {
-      if (player.GetComponent<Rigidbody2D>().velocity.x != 0 && !Game.Paused)
+      var rigidBody2d = player.GetComponent<Rigidbody2D>();
+      if (rigidBody2d != null)
       {
-        pos += speed * Time.deltaTime * 2;
-        if (pos > 1.0f)
+        if (rigidBody2d.velocity.x != 0 && !Game.Paused)
         {
-          pos -= 1.0f;
+          pos += speed * Time.deltaTime * 2;
+          if (pos > 1.0f)
+          {
+            pos -= 1.0f;
+          }
+          GetComponent<Renderer>().material.mainTextureOffset = new Vector2(pos, 0);
+          //renderer.material.mainTextureOffset = new Vector2((Time.time * speed) % 1, 0f);
         }
-        GetComponent<Renderer>().material.mainTextureOffset = new Vector2(pos, 0);
-        //renderer.material.mainTextureOffset = new Vector2((Time.time * speed) % 1, 0f);
       }
     }
   }

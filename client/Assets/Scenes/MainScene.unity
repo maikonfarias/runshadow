@@ -340,6 +340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!50 &475690793
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -348,11 +349,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &475690794
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -652,6 +653,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
 --- !u!4 &728477210
 Transform:
   m_ObjectHideFlags: 0
@@ -694,6 +696,7 @@ MonoBehaviour:
   - {fileID: 100002, guid: 9805cc0adcd3bc643bc15b1039131238, type: 2}
   - {fileID: 100002, guid: 292c673346733ad4dadb81b5a53d82d0, type: 2}
   - {fileID: 100002, guid: 5a060e3ea83beb1419e9d22ae4f16c15, type: 2}
+  - {fileID: 150934, guid: cca5f49c2ffc70b4e89d07dafcada47f, type: 2}
 --- !u!114 &728477212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -831,6 +834,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 62ca38735468a12478225947ff0a1660, type: 3}
   - {fileID: 2800000, guid: 08405d5147c2fb946b4db90f75fdb391, type: 3}
   - {fileID: 2800000, guid: 636ca594bbc30ee49a99a5b44334672d, type: 3}
+  - {fileID: 2800000, guid: 29055966c1f7e6c42a6f24ae3d3a3846, type: 3}
   mapSkinButtons:
   - {fileID: 2800000, guid: ac9798ef292fa414a9bc7316019731be, type: 3}
   - {fileID: 2800000, guid: 2e1925f4db2b8ce4194a9c1c868b89e1, type: 3}
@@ -964,6 +968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!50 &1435905213
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -972,11 +977,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &1435905214
 BoxCollider2D:
   m_ObjectHideFlags: 0

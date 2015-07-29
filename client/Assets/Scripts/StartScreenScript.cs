@@ -65,11 +65,12 @@ public class StartScreenScript : MonoBehaviour
     priceForChar.Add(100);
     priceForChar.Add(200);
     priceForChar.Add(300);
+    priceForChar.Add(400);
 
     priceForMap.Add(0);
     priceForMap.Add(0);
     priceForMap.Add(100);
-    priceForMap.Add(500);
+    priceForMap.Add(200);
 
     //PlayerPrefs.DeleteAll();
     //PlayerPrefs.SetInt("MoneyRubies", 1200);
@@ -287,7 +288,7 @@ public class StartScreenScript : MonoBehaviour
   void DrawCharacterSelectionButtons()
   {
     var buttonSize = Screen.height * 0.2f;
-    var buttonPos = new Rect(Screen.width / 2 - buttonSize * 2.5f, Screen.height / 2 - buttonSize * 1.2f, buttonSize, buttonSize);
+    var buttonPos = new Rect(Screen.width / 2 - buttonSize * 3.0f, Screen.height / 2 - buttonSize * 1.2f, buttonSize, buttonSize);
 
     var bgTexture = whiteTexture;
 
@@ -305,7 +306,7 @@ public class StartScreenScript : MonoBehaviour
     }
 
 
-    buttonPos = new Rect(Screen.width / 2 - buttonSize * 1.5f, Screen.height / 2 - buttonSize * 1.2f, buttonSize, buttonSize);
+    buttonPos = new Rect(Screen.width / 2 - buttonSize * 2f, Screen.height / 2 - buttonSize * 1.2f, buttonSize, buttonSize);
     bgTexture = whiteTexture;
     if (selectedCharacter == 1)
     {
@@ -344,7 +345,7 @@ public class StartScreenScript : MonoBehaviour
     }*/
 
     bool hasChar3 = PlayerPrefs.GetInt("HasChar3", 0) == 1;
-    buttonPos = new Rect(Screen.width / 2 - buttonSize * .5f, Screen.height / 2 - buttonSize * 1.2f, buttonSize, buttonSize);
+    buttonPos = new Rect(Screen.width / 2 - buttonSize * 1f, Screen.height / 2 - buttonSize * 1.2f, buttonSize, buttonSize);
     bgTexture = whiteTexture;
     if (selectedCharacter == 3)
     {
@@ -369,7 +370,7 @@ public class StartScreenScript : MonoBehaviour
     }
 
     bool hasChar4 = PlayerPrefs.GetInt("HasChar4", 0) == 1;
-    buttonPos = new Rect(Screen.width / 2 + buttonSize * .5f, Screen.height / 2 - buttonSize * 1.2f, buttonSize, buttonSize);
+    buttonPos = new Rect(Screen.width / 2 - buttonSize * 0f, Screen.height / 2 - buttonSize * 1.2f, buttonSize, buttonSize);
     bgTexture = whiteTexture;
     if (selectedCharacter == 4)
     {
@@ -394,7 +395,7 @@ public class StartScreenScript : MonoBehaviour
     }
 
     bool hasChar5 = PlayerPrefs.GetInt("HasChar5", 0) == 1;
-    buttonPos = new Rect(Screen.width / 2 + buttonSize * 1.5f, Screen.height / 2 - buttonSize * 1.2f, buttonSize, buttonSize);
+    buttonPos = new Rect(Screen.width / 2 + buttonSize * 1f, Screen.height / 2 - buttonSize * 1.2f, buttonSize, buttonSize);
     bgTexture = whiteTexture;
     if (selectedCharacter == 5)
     {
@@ -415,6 +416,31 @@ public class StartScreenScript : MonoBehaviour
       else
       {
         askUnlockChar = 5;
+      }
+    }
+
+    bool hasChar6 = PlayerPrefs.GetInt("HasChar6", 0) == 1;
+    buttonPos = new Rect(Screen.width / 2 + buttonSize * 2f, Screen.height / 2 - buttonSize * 1.2f, buttonSize, buttonSize);
+    bgTexture = whiteTexture;
+    if (selectedCharacter == 6)
+    {
+      bgTexture = greenTexture;
+    }
+    if (!hasChar6)
+    {
+      bgTexture = redTexture;
+    }
+    GUI.DrawTexture(buttonPos, bgTexture);
+    GUI.DrawTexture(buttonPos, characterButtons[6]);
+    if (GUI.Button(buttonPos, "", new GUIStyle()))
+    {
+      if (hasChar6)
+      {
+        ChangeCurrentSkin(6);
+      }
+      else
+      {
+        askUnlockChar = 6;
       }
     }
   }
