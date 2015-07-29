@@ -1,6 +1,7 @@
 client/Temp/
 client/Library/
 client/Obj/
+client/.vs/
  
 *.csproj
 *.unityproj
