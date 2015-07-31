@@ -3,6 +3,8 @@ using System.Collections;
 
 public class TextureScroller : MonoBehaviour
 {
+  public int mapSkin = 0;
+
   float speed = 0.05f;
   float pos = 0;
   GameObject player;
@@ -22,7 +24,7 @@ public class TextureScroller : MonoBehaviour
 
   void Update()
   {
-    if (PlayerPrefs.GetInt("MapSkin", 0) != 0)
+    if (PlayerPrefs.GetInt("MapSkin", 0) != mapSkin)
     {
       GetComponent<Renderer>().enabled = false;
     }

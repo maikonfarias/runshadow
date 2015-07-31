@@ -73,7 +73,7 @@ public class StartScreenScript : MonoBehaviour
     priceForMap.Add(200);
 
     //PlayerPrefs.DeleteAll();
-    //PlayerPrefs.SetInt("MoneyRubies", 1200);
+    PlayerPrefs.SetInt("MoneyRubies", 1200);
     //PlayerPrefs.SetInt("HasChar3", 0);
     //PlayerPrefs.SetInt("HasChar5", 0);
     //PlayerPrefs.SetInt("HasMap2", 0);
@@ -456,7 +456,7 @@ public class StartScreenScript : MonoBehaviour
   void DrawMapSkinSelectionButtons()
   {
     var buttonSize = Screen.height * 0.2f;
-    var buttonPos = new Rect(Screen.width / 2 - buttonSize * 1.5f, Screen.height / 2 - buttonSize * .2f, buttonSize, buttonSize);
+    var buttonPos = new Rect(Screen.width / 2 - buttonSize * 2f, Screen.height / 2 - buttonSize * .2f, buttonSize, buttonSize);
 
     var bgTexture = whiteTexture;
 
@@ -473,7 +473,7 @@ public class StartScreenScript : MonoBehaviour
     }
 
 
-    buttonPos = new Rect(Screen.width / 2 - buttonSize * .5f, Screen.height / 2 - buttonSize * .2f, buttonSize, buttonSize);
+    buttonPos = new Rect(Screen.width / 2 - buttonSize * 1f, Screen.height / 2 - buttonSize * .2f, buttonSize, buttonSize);
     bgTexture = whiteTexture;
     if (PlayerPrefs.GetInt("MapSkin", 0) == 1)
     {
@@ -487,7 +487,7 @@ public class StartScreenScript : MonoBehaviour
     }
 
     bool hasMap2 = PlayerPrefs.GetInt("HasMap2", 0) == 1;
-    buttonPos = new Rect(Screen.width / 2 + buttonSize * .5f, Screen.height / 2 - buttonSize * .2f, buttonSize, buttonSize);
+    buttonPos = new Rect(Screen.width / 2 + buttonSize * 0f, Screen.height / 2 - buttonSize * .2f, buttonSize, buttonSize);
     bgTexture = whiteTexture;
     if (PlayerPrefs.GetInt("MapSkin", 0) == 2)
     {
@@ -508,6 +508,31 @@ public class StartScreenScript : MonoBehaviour
       else
       {
         askUnlockMap = 2;
+      }
+    }
+
+    bool hasMap3 = PlayerPrefs.GetInt("HasMap3", 0) == 1;
+    buttonPos = new Rect(Screen.width / 2 + buttonSize * 1f, Screen.height / 2 - buttonSize * .2f, buttonSize, buttonSize);
+    bgTexture = whiteTexture;
+    if (PlayerPrefs.GetInt("MapSkin", 0) == 3)
+    {
+      bgTexture = greenTexture;
+    }
+    if (!hasMap3)
+    {
+      bgTexture = redTexture;
+    }
+    GUI.DrawTexture(buttonPos, bgTexture);
+    GUI.DrawTexture(buttonPos, mapSkinButtons[3]);
+    if (GUI.Button(buttonPos, "", new GUIStyle()))
+    {
+      if (hasMap3)
+      {
+        PlayerPrefs.SetInt("MapSkin", 3);
+      }
+      else
+      {
+        askUnlockMap = 3;
       }
     }
   }

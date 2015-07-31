@@ -202,6 +202,92 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f574c136e84e7ef4e9a8502f04c30156, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &292774770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 292774771}
+  - 33: {fileID: 292774775}
+  - 64: {fileID: 292774774}
+  - 23: {fileID: 292774773}
+  - 114: {fileID: 292774772}
+  m_Layer: 0
+  m_Name: BackGroundQuadDungeonLight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &292774771
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 292774770}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .0627844334, y: .400000006, z: 10.8999996}
+  m_LocalScale: {x: 19.5061607, y: 10.9286051, z: 2.57197738}
+  m_Children: []
+  m_Father: {fileID: 728477210}
+  m_RootOrder: 12
+--- !u!114 &292774772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 292774770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e80ebe23b4f1a144f861225d701cbdac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapSkin: 3
+--- !u!23 &292774773
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 292774770}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 23dec6e5f480e8f41b677af467f51eb8, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &292774774
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 292774770}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &292774775
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 292774770}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &330325356
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,6 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2089d39d3b2d9e447bf5e1c8943fd983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mapSkin: 0
 --- !u!4 &466934712 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: f574c136e84e7ef4e9a8502f04c30156, type: 2}
@@ -397,6 +484,92 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 475690790}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &525555590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 525555591}
+  - 33: {fileID: 525555595}
+  - 64: {fileID: 525555594}
+  - 23: {fileID: 525555593}
+  - 114: {fileID: 525555592}
+  m_Layer: 0
+  m_Name: BackGroundQuadDungeon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &525555591
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 525555590}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .0627844334, y: .400000006, z: 11}
+  m_LocalScale: {x: 19.5061607, y: 10.9286051, z: 2.57197738}
+  m_Children: []
+  m_Father: {fileID: 728477210}
+  m_RootOrder: 11
+--- !u!114 &525555592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 525555590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2089d39d3b2d9e447bf5e1c8943fd983, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapSkin: 3
+--- !u!23 &525555593
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 525555590}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: a36eb70d60e71924aaa1ece3565d69d7, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &525555594
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 525555590}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &525555595
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 525555590}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &569000325
 Prefab:
@@ -675,6 +848,8 @@ Transform:
   - {fileID: 466934712}
   - {fileID: 330325357}
   - {fileID: 94306549}
+  - {fileID: 525555591}
+  - {fileID: 292774771}
   m_Father: {fileID: 0}
   m_RootOrder: 5
 --- !u!114 &728477211
@@ -839,6 +1014,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: ac9798ef292fa414a9bc7316019731be, type: 3}
   - {fileID: 2800000, guid: 2e1925f4db2b8ce4194a9c1c868b89e1, type: 3}
   - {fileID: 2800000, guid: a2a05c251f5648142a87b0561b74e538, type: 3}
+  - {fileID: 2800000, guid: d9d4095e632d3354d8a0d3b48ad11643, type: 3}
   selectedRender: {fileID: 0}
   numbersTexture:
   - {fileID: 2800000, guid: a3d1584c396763747a1bc5567e99d9aa, type: 3}
