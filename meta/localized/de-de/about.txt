@@ -1,4 +1,4 @@
-﻿Version 1.19
+﻿Version 1.20
 2015
 
 Produzent und Haupt Entwickler
@@ -14,8 +14,7 @@ Nanda Passos
 http://nandap-art.tumblr.com/
 
 Musik
-DST
-http://www.nosoapradio.us/
+Marlon Kroth
 
 Game Engine
 Unity

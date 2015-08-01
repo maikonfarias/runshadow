@@ -21,6 +21,8 @@ public static class Utils
           return "de-de";
         case SystemLanguage.Japanese:
           return "ja-jp";
+        case SystemLanguage.Russian:
+          return "ru-ru";
         default:
           return "en-us";
       }

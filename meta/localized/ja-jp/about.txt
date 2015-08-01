@@ -1,4 +1,4 @@
-﻿バージョン1.19
+﻿バージョン1.20
 2015
 
 プロデューサーとメイン開発者
@@ -14,8 +14,7 @@ Nanda Passos
 http://nandap-art.tumblr.com/
 
 音楽
-DST
-http://www.nosoapradio.us/
+Marlon Kroth
 
 ゲームエンジン
 Unity (ユニティ)
