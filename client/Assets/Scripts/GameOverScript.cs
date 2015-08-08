@@ -22,7 +22,7 @@ public class GameOverScript : MonoBehaviour
 
   //bool newInterface = true;
   public Texture2D[] characterButtons;
-  public Texture2D characterBGbutton;
+  public Texture2D characterBackgroundTexture;
   public Texture2D[] numbersTexture;
   public Texture2D colonTexture;
   public Texture2D timerTexture;
@@ -57,31 +57,16 @@ public class GameOverScript : MonoBehaviour
 
   void Start()
   {
-    score = PlayerPrefs.GetInt("Score");
-    PlayerPrefs.DeleteKey("Score");
 
-    rubies = PlayerPrefs.GetInt("Rubies", 0);
-    PlayerPrefs.DeleteKey("Rubies");
-
-    moneyRubies = PlayerPrefs.GetInt("MoneyRubies", 0);
-
-    textTime = PlayerPrefs.GetString("Timer", "00:00:000");
-    PlayerPrefs.DeleteKey("Timer");
-
-    txtPlayerName = PlayerPrefs.GetString("PlayerName", "Anonymous");
-
-    refererScreen = PlayerPrefs.GetString("RefererScreen", "GameScreen");
-    PlayerPrefs.DeleteKey("RefererScreen");
-
-    if (PlayerPrefs.GetInt("Sound") == 1 && refererScreen == "GameScreen")
-    {
-      GetComponent<AudioSource>().PlayOneShot(gameOverSound, 0.3f);
-    }
-    StartCoroutine(GetScores());
   }
 
   void Update()
   {
+    if (!Game.Over)
+    {
+      return;
+    }
+    OnGameOver();
     screenUpTime += Time.deltaTime * 2;
     if (refererScreen == "GameScreen" && (Input.GetKeyDown(KeyCode.Return) /*|| Input.GetKeyDown(KeyCode.R)*/ || Input.GetKeyDown(KeyCode.JoystickButton7)))
     {
@@ -95,9 +80,15 @@ public class GameOverScript : MonoBehaviour
 
   void OnGUI()
   {
+    if (!Game.Over)
+    {
+      return;
+    }
+
     GUI.skin.textField.alignment = TextAnchor.MiddleLeft;
     GUI.skin.textField.fontSize = Screen.height / 25;
     GUI.skin.label.fontSize = Screen.height / 30;
+    GUI.skin.box.fontSize = Screen.height / 30;
     //GUI.Box(new Rect(0, 0, 200, 50), refererScreen);
     if (refererScreen == "GameScreen")
     {
@@ -174,16 +165,49 @@ public class GameOverScript : MonoBehaviour
     }
   }
 
+  bool didGameOver = false;
+  void OnGameOver()
+  {
+    if (didGameOver == false)
+    {
+      didGameOver = true;
+      score = PlayerPrefs.GetInt("Score");
+      PlayerPrefs.DeleteKey("Score");
+
+      rubies = PlayerPrefs.GetInt("Rubies", 0);
+      PlayerPrefs.DeleteKey("Rubies");
+
+      moneyRubies = PlayerPrefs.GetInt("MoneyRubies", 0);
+
+      textTime = PlayerPrefs.GetString("Timer", "00:00:000");
+      PlayerPrefs.DeleteKey("Timer");
+
+      txtPlayerName = PlayerPrefs.GetString("PlayerName", "Anonymous");
+
+      refererScreen = PlayerPrefs.GetString("RefererScreen", "GameScreen");
+      PlayerPrefs.DeleteKey("RefererScreen");
+
+      if (PlayerPrefs.GetInt("Sound") == 1 && refererScreen == "GameScreen")
+      {
+        GetComponent<AudioSource>().PlayOneShot(gameOverSound, 0.3f);
+      }
+      StartCoroutine(GetScores());
+    }
+  }
+
   void PlayAgain()
   {
     Game.Started = true;
-    Application.LoadLevel(0);
+    Game.Over = false;
+    //Application.LoadLevel(0);
   }
 
   void GoToStartScreen()
   {
     Game.Started = false;
-    Application.LoadLevel(0);
+    Game.Over = false;
+    didGameOver = false;
+    //Application.LoadLevel(0);
   }
 
   private void DrawScoreHUD()
@@ -362,7 +386,7 @@ public class GameOverScript : MonoBehaviour
       //scoreRow.CharacterPlayed = "6";
       if (scoreRow.CharacterPlayed != "0" && characterButtons.Length > int.Parse(scoreRow.CharacterPlayed) - 1)
       {
-        GUI.DrawTexture(new Rect(marginRight2 + lineHeight * 2, marginTop, lineHeight, lineHeight), characterBGbutton);
+        GUI.DrawTexture(new Rect(marginRight2 + lineHeight * 2, marginTop, lineHeight, lineHeight), characterBackgroundTexture);
         GUI.DrawTexture(new Rect(marginRight2 + lineHeight * 2, marginTop, lineHeight, lineHeight), characterButtons[int.Parse(scoreRow.CharacterPlayed) - 1]);
       }
 

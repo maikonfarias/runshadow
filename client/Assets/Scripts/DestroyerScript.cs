@@ -9,7 +9,9 @@ public class DestroyerScript : MonoBehaviour
     {
       //Debug.Break();
       PlayerPrefs.SetString("RefererScreen", "GameScreen");
-      Application.LoadLevel(1);
+      Game.Started = false;
+      Game.Over = true;
+      Application.LoadLevel(Application.loadedLevel);
       return;
     }
 

@@ -140,7 +140,7 @@ public class HUDScript : MonoBehaviour
         {
           Game.Paused = false;
           Game.Started = false;
-          Application.LoadLevel(0);
+          Application.LoadLevel(Application.loadedLevel);
         }
       }
     }

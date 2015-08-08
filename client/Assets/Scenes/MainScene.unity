@@ -766,6 +766,7 @@ GameObject:
   - 82: {fileID: 728477213}
   - 114: {fileID: 728477214}
   - 114: {fileID: 728477215}
+  - 114: {fileID: 728477216}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1048,6 +1049,67 @@ MonoBehaviour:
   moneyTexture: {fileID: 2800000, guid: 11848fdc3904ef4459d3e564539cb463, type: 3}
   aboutbuttonTexture: {fileID: 2800000, guid: 61b1f32c01eb6b64b9a8b4677c9b1ef7, type: 3}
   aboutCreditsTexture: {fileID: 2800000, guid: 84015047e8e9f594981ad4d2869de6f4, type: 3}
+  scoreBGTexture: {fileID: 2800000, guid: 4a40490c3be888245b71002f761446bc, type: 3}
+--- !u!114 &728477216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 728477205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7564a458f82ab0441ac9b962f619149f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverSound: {fileID: 8300000, guid: b588704972fdeef4fa188eb8c76c4143, type: 3}
+  characterButtons:
+  - {fileID: 2800000, guid: 08d45f02cc366264c946ec7956815514, type: 3}
+  - {fileID: 2800000, guid: a3b79b975e9ed15498d62acaf8c9115a, type: 3}
+  - {fileID: 2800000, guid: 29e436577633b334c81c422d3c8effdc, type: 3}
+  - {fileID: 2800000, guid: 62ca38735468a12478225947ff0a1660, type: 3}
+  - {fileID: 2800000, guid: 08405d5147c2fb946b4db90f75fdb391, type: 3}
+  - {fileID: 2800000, guid: 636ca594bbc30ee49a99a5b44334672d, type: 3}
+  - {fileID: 2800000, guid: 29055966c1f7e6c42a6f24ae3d3a3846, type: 3}
+  characterBackgroundTexture: {fileID: 2800000, guid: 4e7e1c34c7e36c649b2ac00d1af25af7,
+    type: 3}
+  numbersTexture:
+  - {fileID: 2800000, guid: a3d1584c396763747a1bc5567e99d9aa, type: 3}
+  - {fileID: 2800000, guid: 71b6fb365da53ff48b36ecf6bea1f8db, type: 3}
+  - {fileID: 2800000, guid: d60516a530a4c8049afe490b41d6c47a, type: 3}
+  - {fileID: 2800000, guid: 31ce4c153437fb04e9acd1b5de4aa729, type: 3}
+  - {fileID: 2800000, guid: 4095273388986f040b44eb405bc7523b, type: 3}
+  - {fileID: 2800000, guid: 4ea10ee7872720145af8740a750299ad, type: 3}
+  - {fileID: 2800000, guid: a814877dde926844caeef89283434446, type: 3}
+  - {fileID: 2800000, guid: 81bf1698b536114418e4d586f46e6c7e, type: 3}
+  - {fileID: 2800000, guid: a801c74a93807354c941896887295d15, type: 3}
+  - {fileID: 2800000, guid: bfe71aefa7939694ca76e9840666cdce, type: 3}
+  colonTexture: {fileID: 2800000, guid: 743e7e98dc6b47745898314135c5f594, type: 3}
+  timerTexture: {fileID: 2800000, guid: 24d96bad05cc7e5479397bb6e59b33b0, type: 3}
+  rubyTexture0: {fileID: 2800000, guid: cf662914ae09017458a76e065e3aec43, type: 3}
+  rubyTexture1: {fileID: 2800000, guid: cf662914ae09017458a76e065e3aec43, type: 3}
+  restartTexture: {fileID: 2800000, guid: ea04c9adf953e1349b805679eeec63b0, type: 3}
+  quitTexture: {fileID: 2800000, guid: fab2f2754b1e97d42a8fa0f4342d5a70, type: 3}
+  sendTexture: {fileID: 2800000, guid: 8f876ba0901796f48abb78660901e16f, type: 3}
+  refreshTexture: {fileID: 2800000, guid: 1c95c8fd5a15f3140a9debfef270b6cc, type: 3}
+  loadingTexture: {fileID: 2800000, guid: 24d96bad05cc7e5479397bb6e59b33b0, type: 3}
+  doneTexture: {fileID: 2800000, guid: 09dc60032d417e4429d731aca1e71a9b, type: 3}
+  time24hTexture: {fileID: 2800000, guid: b091c0cb0d782f448bea9af467d5dc26, type: 3}
+  timeAllTexture: {fileID: 2800000, guid: 8b22087563a893d45be6a89dabb9341d, type: 3}
+  selectedTexture: {fileID: 2800000, guid: 8c50789f3c9fe3f43a6f2f16bff678d6, type: 3}
+  backTexture: {fileID: 2800000, guid: fab2f2754b1e97d42a8fa0f4342d5a70, type: 3}
+  shareTexture: {fileID: 2800000, guid: 74e94046deb7936438874f288be00db0, type: 3}
+  facebookTexture: {fileID: 2800000, guid: 8ab2c496a5290b64cb934efbdb929687, type: 3}
+  twitterTexture: {fileID: 2800000, guid: 8597500dcfb917a4691bc6b22e98c84a, type: 3}
+  googleplusTexture: {fileID: 2800000, guid: 0a03e348b44f02d4baa1f0f4a052f349, type: 3}
+  scoreboardImageTexture: {fileID: 2800000, guid: 5f997b6cc29e2484eae8e0153634f20a,
+    type: 3}
+  iosIconTexture: {fileID: 2800000, guid: a5f92573553a4604d8ce755b8b8565fa, type: 3}
+  androidIconTexture: {fileID: 2800000, guid: abffd8b43a07380438e7dd4fb7149cf3, type: 3}
+  wpIconTexture: {fileID: 2800000, guid: 45ebd73fba62fdd46b519858e4113c03, type: 3}
+  unityIconTexture: {fileID: 2800000, guid: 00be15a535c34b74bad96e25d12fe677, type: 3}
+  scoreFrameTexture: {fileID: 2800000, guid: 8b6956ce0ec67f247979b04147d6b400, type: 3}
+  timerFrameTexture: {fileID: 2800000, guid: 214a2f33b8e1530429e400e87bec8789, type: 3}
+  rubyFrameTexture: {fileID: 2800000, guid: 4010aa39e75454449a88b0774cc05896, type: 3}
   scoreBGTexture: {fileID: 2800000, guid: 4a40490c3be888245b71002f761446bc, type: 3}
 --- !u!4 &1052081095 stripped
 Transform:

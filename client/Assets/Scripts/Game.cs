@@ -4,6 +4,7 @@ using System.Collections;
 public static class Game
 {
   public static bool Started = false;
+  public static bool Over = false;
 
   public static bool Paused
   {
