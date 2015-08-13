@@ -236,7 +236,7 @@ public class StartScreenScript : MonoBehaviour
   void DrawTitle()
   {
     var buttonSize = Screen.height * 0.2f;
-    var buttonPos = new Rect(Screen.width / 2 - buttonSize * 1.5f, Screen.height / 2 - buttonSize * 2.5f, buttonSize * 3, buttonSize * 1.4f);
+    var buttonPos = new Rect(Screen.width / 2 - buttonSize * 1.5f, Screen.height / 2 - buttonSize * 2.5f, buttonSize * 3, buttonSize * 1.3f);
     GUI.DrawTexture(buttonPos, titleTexture);
   }
 
@@ -266,6 +266,9 @@ public class StartScreenScript : MonoBehaviour
     GUI.DrawTexture(buttonPos, aboutCreditsTexture);
     var aboutText = Utils.LocalizedTexture2D("about_text");
     GUI.DrawTexture(buttonPos, aboutText);
+
+    buttonPos = new Rect(Screen.width / 2 - buttonSize * 1.3f, Screen.height / 2 - buttonSize * 2.2f, buttonSize * 2.6f, buttonSize * 1.1f);
+    GUI.DrawTexture(buttonPos, titleTexture);
   }
 
   void StartGame()
