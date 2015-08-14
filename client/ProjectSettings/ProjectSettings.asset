@@ -121,7 +121,7 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/maikonfarias/Documents/Unity Projects/SharedUnityProjects/runnergame/user.keystore
+  AndroidKeystoreName: C:/Users/Maikon/Documents/Unity/runshadow/user.keystore
   AndroidKeyaliasName: runshadow
   AndroidTVCompatibility: 1
   AndroidIsGame: 1

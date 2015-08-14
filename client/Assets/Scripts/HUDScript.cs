@@ -28,7 +28,7 @@ public class HUDScript : MonoBehaviour
   {
     get
     {
-      return (PlayerPrefs.GetInt("Sound") == 1);
+      return (PlayerPrefs.GetInt("Sound", 1) == 1);
     }
     set
     {

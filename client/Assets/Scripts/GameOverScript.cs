@@ -187,7 +187,7 @@ public class GameOverScript : MonoBehaviour
       refererScreen = PlayerPrefs.GetString("RefererScreen", "GameScreen");
       PlayerPrefs.DeleteKey("RefererScreen");
 
-      if (PlayerPrefs.GetInt("Sound") == 1 && refererScreen == "GameScreen")
+      if (PlayerPrefs.GetInt("Sound", 1) == 1 && refererScreen == "GameScreen")
       {
         GetComponent<AudioSource>().PlayOneShot(gameOverSound, 0.3f);
       }

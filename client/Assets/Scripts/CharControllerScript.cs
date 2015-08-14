@@ -90,7 +90,7 @@ public class CharControllerScript : MonoBehaviour
 
   void PlaySound(AudioClip clip, float volume = 1f)
   {
-    if (PlayerPrefs.GetInt("Sound") == 1)
+    if (PlayerPrefs.GetInt("Sound", 1) == 1)
     {
       mainCamera.GetComponent<AudioSource>().PlayOneShot(clip, volume);
     }
@@ -105,7 +105,7 @@ public class CharControllerScript : MonoBehaviour
 
   void CheckAudioMute()
   {
-    if (Game.Paused || PlayerPrefs.GetInt("Sound") == 0)
+    if (Game.Paused || PlayerPrefs.GetInt("Sound", 1) == 0)
     {
       mainCamera.GetComponent<AudioSource>().mute = true;
     }
