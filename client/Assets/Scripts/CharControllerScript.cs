@@ -37,7 +37,7 @@ public class CharControllerScript : MonoBehaviour
 
   void Update()
   {
-    if (!mainCamera.GetComponent<AudioSource>().isPlaying && beforeGameStarted != Game.Started)
+    if (!mainCamera.GetComponent<AudioSource>().isPlaying && beforeGameStarted != Game.Started && !Game.Score)
     {
       PlayMusic();
       beforeGameStarted = Game.Started;
@@ -46,6 +46,18 @@ public class CharControllerScript : MonoBehaviour
     if (Game.Started)
     {
       progressiveSpeed += Time.deltaTime / 400;
+    }
+
+    if (Game.Over)
+    {
+      if (progressiveSpeed > 0)
+      {
+        progressiveSpeed -= Time.deltaTime;
+      }
+      if (progressiveSpeed < 0)
+      {
+        progressiveSpeed = 0;
+      }
     }
 
     CheckAudioMute();

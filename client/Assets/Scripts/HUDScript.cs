@@ -51,6 +51,9 @@ public class HUDScript : MonoBehaviour
 
       textTime = GetStringTimer(floatTime);
     }
+    PlayerPrefs.SetInt("Score", (int)(playerScore * 100));
+    PlayerPrefs.SetInt("Rubies", (int)(rubies));
+    PlayerPrefs.SetString("Timer", textTime);
   }
 
   string GetStringTimer(float fTime)
@@ -76,9 +79,9 @@ public class HUDScript : MonoBehaviour
 
   void OnDisable()
   {
-    PlayerPrefs.SetInt("Score", (int)(playerScore * 100));
+    /*PlayerPrefs.SetInt("Score", (int)(playerScore * 100));
     PlayerPrefs.SetInt("Rubies", (int)(rubies));
-    PlayerPrefs.SetString("Timer", textTime);
+    PlayerPrefs.SetString("Timer", textTime);*/
   }
 
   void OnGUI()

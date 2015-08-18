@@ -55,14 +55,16 @@ public class GameOverScript : MonoBehaviour
 
   public Texture2D scoreFrameTexture, timerFrameTexture, rubyFrameTexture, scoreBGTexture;
 
+  GameObject mainCamera;
+
   void Start()
   {
-
+    mainCamera = GameObject.Find("Main Camera");
   }
 
   void Update()
   {
-    if (!Game.Over)
+    if (!Game.Score)
     {
       return;
     }
@@ -80,7 +82,7 @@ public class GameOverScript : MonoBehaviour
 
   void OnGUI()
   {
-    if (!Game.Over)
+    if (!Game.Score)
     {
       return;
     }
@@ -185,11 +187,12 @@ public class GameOverScript : MonoBehaviour
       txtPlayerName = PlayerPrefs.GetString("PlayerName", "Anonymous");
 
       refererScreen = PlayerPrefs.GetString("RefererScreen", "GameScreen");
-      PlayerPrefs.DeleteKey("RefererScreen");
+      //PlayerPrefs.DeleteKey("RefererScreen");
 
       if (PlayerPrefs.GetInt("Sound", 1) == 1 && refererScreen == "GameScreen")
       {
-        GetComponent<AudioSource>().PlayOneShot(gameOverSound, 0.3f);
+        mainCamera.GetComponent<AudioSource>().Stop();
+        mainCamera.GetComponent<AudioSource>().PlayOneShot(gameOverSound, 0.3f);
       }
       StartCoroutine(GetScores());
     }
@@ -198,16 +201,16 @@ public class GameOverScript : MonoBehaviour
   void PlayAgain()
   {
     Game.Started = true;
-    Game.Over = false;
-    //Application.LoadLevel(0);
+    Game.Score = false;
+    Application.LoadLevel(0);
   }
 
   void GoToStartScreen()
   {
     Game.Started = false;
-    Game.Over = false;
+    Game.Score = false;
     didGameOver = false;
-    //Application.LoadLevel(0);
+    Application.LoadLevel(0);
   }
 
   private void DrawScoreHUD()
@@ -463,6 +466,7 @@ public class GameOverScript : MonoBehaviour
 
     // Post the URL to the site and create a download object to get the result.
     WWW hs_post = new WWW(post_url);
+    Debug.Log("requesting WWW: "+post_url);
     yield return hs_post; // Wait until the download is done
 
     if (hs_post.error != null)
@@ -483,17 +487,15 @@ public class GameOverScript : MonoBehaviour
   IEnumerator GetScores()
   {
     loadingScoreStatus = 1;
-    string highscoreURL = Config.ServerAddress + "?action=list";
-
-    highscoreURL += "&version=" + Config.Version;
-    highscoreURL += "&format=json";
+    string highscoreURL = Config.ServerAddress + "?action=list&version=" + Config.Version + "&format=json";
 
     if (listMode == "24h")
     {
       highscoreURL += "&period=24";
     }
-    //gameObject.guiText.text = "Loading Scores";
+
     WWW response = new WWW(highscoreURL);
+
     yield return response;
 
     if (response.error != null)

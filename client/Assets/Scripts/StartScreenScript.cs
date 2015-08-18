@@ -88,7 +88,7 @@ public class StartScreenScript : MonoBehaviour
     if (Input.GetKeyDown(KeyCode.JoystickButton6))
     {
       PlayerPrefs.SetString("RefererScreen", "StartScreen");
-      Game.Over = true;    
+      Game.Score = true;    
       //Application.LoadLevel(1);
     }
     if (Input.GetKeyDown(KeyCode.Escape))
@@ -104,7 +104,7 @@ public class StartScreenScript : MonoBehaviour
 
   void OnGUI()
   {
-    if (!Game.Started && !Game.Over)
+    if (!Game.Started && !Game.Score)
     {
       if (isPreStart)
       {
@@ -658,7 +658,7 @@ public class StartScreenScript : MonoBehaviour
     if (GUI.Button(buttonPos, "", new GUIStyle()))
     {
       PlayerPrefs.SetString("RefererScreen", "StartScreen");
-      Game.Over = true;
+      Game.Score = true;
       //Application.LoadLevel(1);
     }
   }

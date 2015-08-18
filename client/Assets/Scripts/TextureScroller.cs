@@ -33,6 +33,16 @@ public class TextureScroller : MonoBehaviour
       GetComponent<Renderer>().enabled = true;
     }
 
+    float difference = speed * Time.deltaTime * 2;
+
+    if (Game.Over)
+    {
+      if(speed > 0)
+        speed -= Time.deltaTime / 20;
+      if (speed < 0)
+        speed = 0;
+    }
+
     player = GameObject.FindGameObjectsWithTag("Player")[0];
     if (player != null)
     {
@@ -41,7 +51,7 @@ public class TextureScroller : MonoBehaviour
       {
         if (rigidBody2d.velocity.x != 0 && !Game.Paused)
         {
-          pos += speed * Time.deltaTime * 2;
+          pos += difference;
           if (pos > 1.0f)
           {
             pos -= 1.0f;

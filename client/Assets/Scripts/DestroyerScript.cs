@@ -3,15 +3,18 @@ using System.Collections;
 
 public class DestroyerScript : MonoBehaviour
 {
+  void Start()
+  {
+
+  }
+
   void OnTriggerEnter2D(Collider2D other)
   {
     if (other.tag == "Player")
     {
-      //Debug.Break();
-      PlayerPrefs.SetString("RefererScreen", "GameScreen");
+      PlayerPrefs.SetString("RefererScreen", "GameScreen");	  
       Game.Started = false;
-      Game.Over = true;
-      Application.LoadLevel(Application.loadedLevel);
+      Game.Score = true;
       return;
     }
 
