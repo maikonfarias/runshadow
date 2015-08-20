@@ -466,7 +466,6 @@ public class GameOverScript : MonoBehaviour
 
     // Post the URL to the site and create a download object to get the result.
     WWW hs_post = new WWW(post_url);
-    Debug.Log("requesting WWW: "+post_url);
     yield return hs_post; // Wait until the download is done
 
     if (hs_post.error != null)

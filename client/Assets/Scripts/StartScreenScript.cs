@@ -73,7 +73,7 @@ public class StartScreenScript : MonoBehaviour
     priceForMap.Add(200);
 
     //PlayerPrefs.DeleteAll();
-    PlayerPrefs.SetInt("MoneyRubies", 1200);
+    //PlayerPrefs.SetInt("MoneyRubies", 1200);
     //PlayerPrefs.SetInt("HasChar3", 0);
     //PlayerPrefs.SetInt("HasChar5", 0);
     //PlayerPrefs.SetInt("HasMap2", 0);
