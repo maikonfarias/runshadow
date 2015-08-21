@@ -72,14 +72,14 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleIdentifier: com.maikonfarias.runshadow
-  bundleVersion: 1.19
+  bundleVersion: 1.20
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
   productGUID: 07a996f3a1fa743948c9913c0cac8a72
-  AndroidBundleVersionCode: 22
+  AndroidBundleVersionCode: 23
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -282,10 +282,10 @@ PlayerSettings:
   metroPackageLogo240: Assets/Sprites/Icons/icon_120.png
   metroPackageVersion: 1.19.0.0
   metroCertificatePath: Assets/MetroTestCertificate.pfx
-  metroCertificatePassword: EIACGFN
-  metroCertificateSubject: Maikon Farias Roldao
-  metroCertificateIssuer: Maikon Farias Roldao
-  metroCertificateNotAfter: 8052ddf8e057d101
+  metroCertificatePassword: 
+  metroCertificateSubject: Maikon
+  metroCertificateIssuer: Maikon
+  metroCertificateNotAfter: 80c16d3b88fad101
   metroApplicationDescription: Endless Runner Game
   metroStoreTileLogo80: Assets/Sprites/Icons/icon_120.png
   metroStoreTileLogo: Assets/Sprites/Icons/icon_150.png

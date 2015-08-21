@@ -1,3 +1,9 @@
+1.20:
+- Neuer Charakter (Chi)
+- Neue Karte (Dungeon)
+- Game Music aktualisiert
+- Game Over Verbesserungen
+- Fehlerbehebung
 1.19:
 - Spiel auf Portugiesisch, Spanisch, Deutsch, Französisch, Japanisch und Chinesisch lokalisiert.
 - Anleitung vor Spielbeginn;

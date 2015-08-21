@@ -1,3 +1,9 @@
+1.20:
+- Nouveau personnage (Chi)
+- Nouvelle carte (Donjon)
+- Nouvelle musique de jeu
+- Des améliorations à Game Over
+- Corrections de bug
 1.19:
 - Jeu localisée à portugais, espagnol, allemand, français, japonais et chinois.
 - Instructions avant le début du jeu;

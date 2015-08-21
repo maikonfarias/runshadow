@@ -1,3 +1,9 @@
+1.20:
+- Novo personagem (Chi)
+- Novo mapa (Dungeon)
+- Música do jogo atualizada
+- Melhorias no fim do jogo
+- Correções de bugs
 1.19:
 - Jogo localizado para Português, Espanhol, Alemão, Francês, Japonês e Chinês.
 - Instruções antes de início do jogo;

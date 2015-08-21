@@ -1,3 +1,9 @@
+1.20:
+- Nuevo personaje (Chi)
+- Nuevo mapa (Mazmorra)
+- Música del juego actualizada
+- Mejoras en GameOver
+- Corrección de errores
 1.19:
 - Juego localizado en portugués, español, alemán, francés, japonés y chino.
 - Instrucciones antes de inicio del juego;
