@@ -32,12 +32,8 @@ https://play.google.com/store/apps/details?id=com.maikonfarias.runshadow
 iOS:
 https://itunes.apple.com/us/app/run-shadow/id881946921?ls=1&mt=8
 
-Windows Phone:
-http://www.windowsphone.com/pt-br/store/app/run-shadow/7b9f263d-1985-42c3-b053-e35b9a21ec32
-
-Windows 8 App:
-http://apps.microsoft.com/windows/app/run-shadow/5846a200-f50d-4439-8bb0-1215aed1e9b4
-
+Windows (Phone/PC):
+https://www.microsoft.com/en-us/store/games/run-shadow/9wzdncrdt0pc
 
 My Blog:<br />
 http://maikonfarias.com/blog
