@@ -6,6 +6,7 @@ public class GradientBackground : MonoBehaviour
   public Color topColor = Color.blue;
   public Color bottomColor = Color.white;
   public int gradientLayer = 7;
+  public Shader bgShader;
 
   private int currentSkin = 0;
   private Mesh backgroundMesh;
@@ -68,7 +69,7 @@ public class GradientBackground : MonoBehaviour
 
     backgroundMesh.triangles = new int[6] { 0, 1, 2, 1, 3, 2 };
 
-    Material mat = new Material("Shader \"Vertex Color Only\"{Subshader{BindChannels{Bind \"vertex\", vertex Bind \"color\", color}Pass{}}}");
+    Material mat = new Material(bgShader);
     GameObject gradientPlane = new GameObject("Gradient Plane", typeof(MeshFilter), typeof(MeshRenderer));
 
     ((MeshFilter)gradientPlane.GetComponent(typeof(MeshFilter))).mesh = backgroundMesh;
