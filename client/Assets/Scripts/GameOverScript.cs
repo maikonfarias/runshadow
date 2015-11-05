@@ -5,6 +5,8 @@ using System.Security.Cryptography;
 using System;
 using SimpleJSON;
 using Score;
+using UnityEngine.Advertisements;
+using UnityEngine.Analytics;
 
 public class GameOverScript : MonoBehaviour
 {
@@ -60,6 +62,14 @@ public class GameOverScript : MonoBehaviour
   void Start()
   {
     mainCamera = GameObject.Find("Main Camera");
+  }
+
+  public void ShowAd()
+  {
+    if (Advertisement.IsReady())
+    {
+      Advertisement.Show();
+    }
   }
 
   void Update()
@@ -171,7 +181,7 @@ public class GameOverScript : MonoBehaviour
   void OnGameOver()
   {
     if (didGameOver == false)
-    {
+    { 
       didGameOver = true;
       score = PlayerPrefs.GetInt("Score");
       PlayerPrefs.DeleteKey("Score");
@@ -184,15 +194,34 @@ public class GameOverScript : MonoBehaviour
       textTime = PlayerPrefs.GetString("Timer", "00:00:000");
       PlayerPrefs.DeleteKey("Timer");
 
+      float floatTime = PlayerPrefs.GetFloat("TimerFloat", 0);
+
       txtPlayerName = PlayerPrefs.GetString("PlayerName", "Anonymous");
 
       refererScreen = PlayerPrefs.GetString("RefererScreen", "GameScreen");
       //PlayerPrefs.DeleteKey("RefererScreen");
 
-      if (PlayerPrefs.GetInt("Sound", 1) == 1 && refererScreen == "GameScreen")
+      if (refererScreen == "GameScreen")
       {
-        mainCamera.GetComponent<AudioSource>().Stop();
-        mainCamera.GetComponent<AudioSource>().PlayOneShot(gameOverSound, 0.3f);
+        if (Game.Sound)
+        {
+          mainCamera.GetComponent<AudioSource>().Stop();
+          mainCamera.GetComponent<AudioSource>().PlayOneShot(gameOverSound, 0.3f);
+        }
+
+        Analytics.CustomEvent("gameOver", new Dictionary<string, object>
+        {
+          { "score", score },
+          { "rubies", rubies },
+          { "rubiesTotal", moneyRubies },
+          { "time", floatTime },
+          { "char", Utils.CharacterName(Game.Character)},
+          { "map", Utils.MapName(Game.Map) },
+          { "sound",  Game.Sound },
+          { "device", Utils.PlatformDevice }
+        });
+
+        ShowAd();
       }
       StartCoroutine(GetScores());
     }

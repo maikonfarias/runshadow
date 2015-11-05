@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public static class Game
 {
@@ -33,4 +32,40 @@ public static class Game
       Time.timeScale = value ? 0.0f : 1.0f;
     }
   }  
+
+  public static bool Sound
+  {
+    get
+    {
+      return PlayerPrefs.GetInt("Sound", 1) == 1;
+    }
+    set
+    {
+      PlayerPrefs.SetInt("Sound", 0);
+    }
+  }
+
+  public static int Character
+  {
+    get
+    {
+      return PlayerPrefs.GetInt("SelectedCharacter", 0);
+    }
+    set
+    {
+      PlayerPrefs.SetInt("SelectedCharacter", value);
+    }
+  }
+
+  public static int Map
+  {
+    get
+    {
+      return PlayerPrefs.GetInt("MapSkin", 0);
+    }
+    set
+    {
+      PlayerPrefs.SetInt("MapSkin", value);
+    }
+  }
 }

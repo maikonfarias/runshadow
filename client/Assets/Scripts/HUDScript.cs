@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System;
 
 public class HUDScript : MonoBehaviour
@@ -54,6 +53,7 @@ public class HUDScript : MonoBehaviour
     PlayerPrefs.SetInt("Score", (int)(playerScore * 100));
     PlayerPrefs.SetInt("Rubies", (int)(rubies));
     PlayerPrefs.SetString("Timer", textTime);
+    PlayerPrefs.SetFloat("TimerFloat", floatTime);
   }
 
   string GetStringTimer(float fTime)

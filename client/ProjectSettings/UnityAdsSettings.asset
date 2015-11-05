@@ -3,9 +3,9 @@
 --- !u!292 &1
 UnityAdsSettings:
   m_ObjectHideFlags: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_InitializeOnStartup: 1
   m_TestMode: 0
   m_EnabledPlatforms: 4294967295
-  m_IosGameId: 
-  m_AndroidGameId: 
+  m_IosGameId: 1004838
+  m_AndroidGameId: 1004839

@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public static class Utils
 {
@@ -58,6 +57,46 @@ public static class Utils
 #else
       return "webplayer";
 #endif
+    }
+  }
+
+  public static string CharacterName(int characterId)
+  {
+    switch(characterId)
+    {
+      case 0:
+        return "Shadow";
+      case 1:
+        return "Retro";
+      case 2:
+        return "PJ";
+      case 3:
+        return "Soccer Ball";
+      case 4:
+        return "Invisible";
+      case 5:
+        return "Toly";
+      case 6:
+        return "Chi";
+      default:
+        return "Undefined";
+    }
+  }
+
+  public static string MapName(int mapId)
+  {
+    switch (mapId)
+    {
+      case 0:
+        return "Field";
+      case 1:
+        return "Retro";
+      case 2:
+        return "Black and White";
+      case 3:
+        return "Dungeon";
+      default:
+        return "Undefined";
     }
   }
 }
