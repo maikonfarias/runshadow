@@ -68,4 +68,18 @@ public static class Game
       PlayerPrefs.SetInt("MapSkin", value);
     }
   }
+
+  public static void AddTotalRubies(int quant)
+  {
+    var moneyRubies = PlayerPrefs.GetInt("MoneyRubies", 0);
+    PlayerPrefs.SetInt("MoneyRubies", moneyRubies + quant);
+  }
+
+  public static int TotalRubies
+  {
+    get
+    {
+      return PlayerPrefs.GetInt("MoneyRubies", 0);
+    }
+  }
 }

@@ -15,7 +15,7 @@ public class PowerupScript : MonoBehaviour
   {
     if (other.tag == "Player")
     {
-      if (PlayerPrefs.GetInt("Sound", 1) == 1)
+      if (Game.Sound)
       {
         mainCamera.GetComponent<AudioSource>().PlayOneShot(coinSound, 1f);
       }

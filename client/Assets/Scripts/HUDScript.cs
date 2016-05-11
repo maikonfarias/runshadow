@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class HUDScript : MonoBehaviour
 {
@@ -72,8 +73,7 @@ public class HUDScript : MonoBehaviour
   public void AddRubies(int quant = 1)
   {
     rubies++;
-    var moneyRubies = PlayerPrefs.GetInt("MoneyRubies", 0);
-    PlayerPrefs.SetInt("MoneyRubies", moneyRubies + quant);
+    Game.AddTotalRubies(quant);
     IncreaseScore(1000);
   }
 
@@ -123,7 +123,7 @@ public class HUDScript : MonoBehaviour
         {
           Game.Paused = false;
           Game.Started = true;
-          Application.LoadLevel(Application.loadedLevel);
+          SceneManager.LoadScene(0);
         }
 
 
@@ -143,7 +143,7 @@ public class HUDScript : MonoBehaviour
         {
           Game.Paused = false;
           Game.Started = false;
-          Application.LoadLevel(Application.loadedLevel);
+          SceneManager.LoadScene(0);
         }
       }
     }

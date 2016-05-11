@@ -247,14 +247,7 @@ public class StartScreenScript : MonoBehaviour
 
     if (GUI.Button(buttonPos, "", new GUIStyle()))
     {
-      if (isAboutOpen)
-      {
-        isAboutOpen = false;
-      }
-      else
-      {
-        isAboutOpen = true;
-      }
+      isAboutOpen = !isAboutOpen;
     }
   }
 

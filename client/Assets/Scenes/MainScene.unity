@@ -1102,6 +1102,7 @@ MonoBehaviour:
   facebookTexture: {fileID: 2800000, guid: 8ab2c496a5290b64cb934efbdb929687, type: 3}
   twitterTexture: {fileID: 2800000, guid: 8597500dcfb917a4691bc6b22e98c84a, type: 3}
   googleplusTexture: {fileID: 2800000, guid: 0a03e348b44f02d4baa1f0f4a052f349, type: 3}
+  adsButtonTexture: {fileID: 2800000, guid: a4080cb165bef3f4898a43c0ddee62be, type: 3}
   scoreboardImageTexture: {fileID: 2800000, guid: 5f997b6cc29e2484eae8e0153634f20a,
     type: 3}
   iosIconTexture: {fileID: 2800000, guid: a5f92573553a4604d8ce755b8b8565fa, type: 3}

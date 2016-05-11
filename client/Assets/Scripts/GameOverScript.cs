@@ -7,6 +7,7 @@ using SimpleJSON;
 using Score;
 using UnityEngine.Advertisements;
 using UnityEngine.Analytics;
+using UnityEngine.SceneManagement;
 
 public class GameOverScript : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class GameOverScript : MonoBehaviour
 
   string listMode = "24h";
   bool isShareOpen = false;
+  bool didSeeAdd = false;
 
   //bool newInterface = true;
   public Texture2D[] characterButtons;
@@ -47,6 +49,7 @@ public class GameOverScript : MonoBehaviour
   public Texture2D facebookTexture;
   public Texture2D twitterTexture;
   public Texture2D googleplusTexture;
+  public Texture2D adsButtonTexture;
 
   public Texture2D scoreboardImageTexture;
 
@@ -66,10 +69,22 @@ public class GameOverScript : MonoBehaviour
 
   public void ShowAd()
   {
+#if UNITY_ANDROID
     if (Advertisement.IsReady())
     {
-      Advertisement.Show();
+      Advertisement.Show(null, new ShowOptions
+      {
+        resultCallback = result => {
+          Debug.Log(result.ToString());
+          if (result == ShowResult.Finished)
+          {
+            Game.AddTotalRubies(20);
+            didSeeAdd = true;
+          }
+        }
+      });
     }
+#endif
   }
 
   void Update()
@@ -105,6 +120,7 @@ public class GameOverScript : MonoBehaviour
     if (refererScreen == "GameScreen")
     {
       DrawScoreHUD();
+      DrawAdsButton();
     }
     DrawScoreboard();
 
@@ -181,15 +197,14 @@ public class GameOverScript : MonoBehaviour
   void OnGameOver()
   {
     if (didGameOver == false)
-    { 
+    {
+      didSeeAdd = false;
       didGameOver = true;
       score = PlayerPrefs.GetInt("Score");
       PlayerPrefs.DeleteKey("Score");
 
       rubies = PlayerPrefs.GetInt("Rubies", 0);
       PlayerPrefs.DeleteKey("Rubies");
-
-      moneyRubies = PlayerPrefs.GetInt("MoneyRubies", 0);
 
       textTime = PlayerPrefs.GetString("Timer", "00:00:000");
       PlayerPrefs.DeleteKey("Timer");
@@ -213,15 +228,16 @@ public class GameOverScript : MonoBehaviour
         {
           { "score", score },
           { "rubies", rubies },
-          { "rubiesTotal", moneyRubies },
+          { "rubiesTotal", Game.TotalRubies },
           { "time", floatTime },
-          { "char", Utils.CharacterName(Game.Character)},
+          { "char", Utils.CharacterName(Game.Character) },
           { "map", Utils.MapName(Game.Map) },
           { "sound",  Game.Sound },
-          { "device", Utils.PlatformDevice }
+          { "device", Utils.PlatformDevice },
+          { "version", Config.Version }
         });
 
-        ShowAd();
+        //ShowAd();
       }
       StartCoroutine(GetScores());
     }
@@ -231,7 +247,7 @@ public class GameOverScript : MonoBehaviour
   {
     Game.Started = true;
     Game.Score = false;
-    Application.LoadLevel(0);
+    SceneManager.LoadScene(0);
   }
 
   void GoToStartScreen()
@@ -239,7 +255,24 @@ public class GameOverScript : MonoBehaviour
     Game.Started = false;
     Game.Score = false;
     didGameOver = false;
-    Application.LoadLevel(0);
+    SceneManager.LoadScene(0);
+  }
+
+  private void DrawAdsButton()
+  {
+#if UNITY_ANDROID || UNITY_IOS
+    var buttonSize = Screen.height * 0.2f;
+    var buttonPos = new Rect(0, Screen.height - buttonSize, buttonSize, buttonSize);
+    GUI.DrawTexture(buttonPos, didSeeAdd? doneTexture : adsButtonTexture);
+
+    if (GUI.Button(buttonPos, "", new GUIStyle()))
+    {
+      if (!didSeeAdd)
+      {
+        ShowAd();
+      }
+    }
+#endif
   }
 
   private void DrawScoreHUD()
@@ -306,7 +339,7 @@ public class GameOverScript : MonoBehaviour
     }
 
     //int moneyRubies = 314522;
-    char[] lettersMoneyRubies = moneyRubies.ToString().ToCharArray();
+    char[] lettersMoneyRubies = Game.TotalRubies.ToString().ToCharArray();
     Array.Reverse(lettersMoneyRubies);
     //float marginRight4 = buttonSize * 5.6f;
     float marginRight4 = marginCenter + buttonSize * 2.3f;

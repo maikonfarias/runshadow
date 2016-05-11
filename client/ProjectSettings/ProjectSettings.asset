@@ -3,11 +3,10 @@
 --- !u!129 &1
 PlayerSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 7
+  serializedVersion: 8
   AndroidProfiler: 0
   defaultScreenOrientation: 4
   targetDevice: 2
-  targetResolution: 0
   useOnDemandResources: 0
   accelerometerFrequency: 0
   companyName: Maikon
@@ -15,6 +14,7 @@ PlayerSettings:
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_ShowUnitySplashScreen: 1
+  m_VirtualRealitySplashScreen: {fileID: 0}
   defaultScreenWidth: 1280
   defaultScreenHeight: 720
   defaultScreenWidthWeb: 1024
@@ -56,15 +56,19 @@ PlayerSettings:
   xboxEnableKinectAutoTracking: 0
   xboxEnableFitness: 0
   visibleInBackground: 0
+  allowFullscreenSwitch: 1
   macFullscreenMode: 2
   d3d9FullscreenMode: 1
   d3d11FullscreenMode: 1
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0
   xboxEnableGuest: 0
+  xboxEnablePIXSampling: 0
   n3dsDisableStereoscopicView: 0
   n3dsEnableSharedListOpt: 1
   n3dsEnableVSync: 0
+  uiUse16BitDepthBuffer: 0
+  ignoreAlphaClear: 0
   xboxOneResolution: 0
   ps3SplashScreen: {fileID: 0}
   videoMemoryForVertexBuffers: 0
@@ -115,6 +119,7 @@ PlayerSettings:
   iPhoneTargetOSVersion: 22
   uIPrerenderedIcon: 0
   uIRequiresPersistentWiFi: 0
+  uIRequiresFullScreen: 1
   uIStatusBarHidden: 1
   uIExitOnSuspend: 0
   uIStatusBarStyle: 0
@@ -128,6 +133,10 @@ PlayerSettings:
   iPadHighResPortraitSplashScreen: {fileID: 0}
   iPadLandscapeSplashScreen: {fileID: 0}
   iPadHighResLandscapeSplashScreen: {fileID: 0}
+  appleTVSplashScreen: {fileID: 0}
+  tvOSSmallIconLayers: []
+  tvOSLargeIconLayers: []
+  tvOSTopShelfImageLayers: []
   iOSLaunchScreenType: 0
   iOSLaunchScreenPortrait: {fileID: 0}
   iOSLaunchScreenLandscape: {fileID: 0}
@@ -163,8 +172,10 @@ PlayerSettings:
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
-    - m_Icon: {fileID: 2800000, guid: f31e4cb563fe2b9438a896d0ddfaae29, type: 3}
-      m_Size: 128
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: f31e4cb563fe2b9438a896d0ddfaae29, type: 3}
+      m_Width: 128
+      m_Height: 128
   m_BuildTargetBatching:
   - m_BuildTarget: Web
     m_StaticBatching: 1
@@ -276,6 +287,13 @@ PlayerSettings:
   ps4pnGameCustomData: 1
   playerPrefsSupport: 0
   ps4ReprojectionSupport: 0
+  ps4UseAudio3dBackend: 0
+  ps4SocialScreenEnabled: 0
+  ps4Audio3dVirtualSpeakerCount: 14
+  ps4attribCpuUsage: 0
+  ps4PatchPkgPath: 
+  ps4PatchLatestPkgPath: 
+  ps4PatchChangeinfoPath: 
   ps4attribUserManagement: 0
   ps4attribMoveSupport: 0
   ps4attrib3DSupport: 0
@@ -332,10 +350,6 @@ PlayerSettings:
   spritePackerPolicy: 
   scriptingDefineSymbols: {}
   metroPackageName: com.maikonfarias.runshadow
-  metroPackageLogo: Assets/Sprites/Icons/icon_50.png
-  metroPackageLogo140: Assets/Sprites/Icons/icon_70.png
-  metroPackageLogo180: Assets/Sprites/Icons/icon_90.png
-  metroPackageLogo240: Assets/Sprites/Icons/icon_120.png
   metroPackageVersion: 1.19.0.0
   metroCertificatePath: Assets/MetroTestCertificate.pfx
   metroCertificatePassword: 
@@ -343,44 +357,43 @@ PlayerSettings:
   metroCertificateIssuer: Maikon
   metroCertificateNotAfter: 80c16d3b88fad101
   metroApplicationDescription: Endless Runner Game
-  metroStoreTileLogo80: Assets/Sprites/Icons/icon_120.png
-  metroStoreTileLogo: Assets/Sprites/Icons/icon_150.png
-  metroStoreTileLogo140: Assets/Sprites/Icons/icon_210.png
-  metroStoreTileLogo180: Assets/Sprites/Icons/icon_270.png
-  metroStoreTileWideLogo80: Assets/Sprites/Icons/icon_120_248.png
-  metroStoreTileWideLogo: Assets/Sprites/Icons/icon_310_150.png
-  metroStoreTileWideLogo140: Assets/Sprites/Icons/icon_434_210.png
-  metroStoreTileWideLogo180: Assets/Sprites/Icons/icon_558_270.png
-  metroStoreTileSmallLogo80: Assets/Sprites/Icons/icon_24.png
-  metroStoreTileSmallLogo: Assets/Sprites/Icons/icon_30.png
-  metroStoreTileSmallLogo140: Assets/Sprites/Icons/icon_42.png
-  metroStoreTileSmallLogo180: Assets/Sprites/Icons/icon_54.png
-  metroStoreSmallTile80: Assets/Sprites/Icons/icon_56.png
-  metroStoreSmallTile: Assets/Sprites/Icons/icon_70.png
-  metroStoreSmallTile140: Assets/Sprites/Icons/icon_98.png
-  metroStoreSmallTile180: Assets/Sprites/Icons/icon_126.png
-  metroStoreLargeTile80: Assets/Sprites/Icons/icon_248.png
-  metroStoreLargeTile: Assets/Sprites/Icons/icon_310.png
-  metroStoreLargeTile140: Assets/Sprites/Icons/icon_434.png
-  metroStoreLargeTile180: Assets/Sprites/Icons/icon_558.png
-  metroStoreSplashScreenImage: 
-  metroStoreSplashScreenImage140: 
-  metroStoreSplashScreenImage180: 
-  metroPhoneAppIcon: Assets/Sprites/Icons/icon_44.png
-  metroPhoneAppIcon140: Assets/Sprites/Icons/icon_62.png
-  metroPhoneAppIcon240: Assets/Sprites/Icons/icon_106.png
-  metroPhoneSmallTile: Assets/Sprites/Icons/icon_71.png
-  metroPhoneSmallTile140: Assets/Sprites/Icons/icon_99.png
-  metroPhoneSmallTile240: Assets/Sprites/Icons/icon_170.png
-  metroPhoneMediumTile: Assets/Sprites/Icons/icon_150.png
-  metroPhoneMediumTile140: Assets/Sprites/Icons/icon_210.png
-  metroPhoneMediumTile240: Assets/Sprites/Icons/icon_360.png
-  metroPhoneWideTile: Assets/Sprites/Icons/icon_310_150.png
-  metroPhoneWideTile140: Assets/Sprites/Icons/icon_434_210.png
-  metroPhoneWideTile240: Assets/Sprites/Icons/tile_744_360.png
-  metroPhoneSplashScreenImage: 
-  metroPhoneSplashScreenImage140: 
-  metroPhoneSplashScreenImage240: 
+  wsaImages:
+    65636: Assets/Sprites/Icons/icon_50.png
+    65676: Assets/Sprites/Icons/icon_70.png
+    65716: Assets/Sprites/Icons/icon_90.png
+    65776: Assets/Sprites/Icons/icon_120.png
+    720976: Assets/Sprites/Icons/icon_120.png
+    720996: Assets/Sprites/Icons/icon_150.png
+    721036: Assets/Sprites/Icons/icon_210.png
+    721076: Assets/Sprites/Icons/icon_270.png
+    786512: Assets/Sprites/Icons/icon_120_248.png
+    786532: Assets/Sprites/Icons/icon_310_150.png
+    786572: Assets/Sprites/Icons/icon_434_210.png
+    786612: Assets/Sprites/Icons/icon_558_270.png
+    852048: Assets/Sprites/Icons/icon_24.png
+    852068: Assets/Sprites/Icons/icon_30.png
+    852108: Assets/Sprites/Icons/icon_42.png
+    852148: Assets/Sprites/Icons/icon_54.png
+    917584: Assets/Sprites/Icons/icon_56.png
+    917604: Assets/Sprites/Icons/icon_70.png
+    917644: Assets/Sprites/Icons/icon_98.png
+    917684: Assets/Sprites/Icons/icon_126.png
+    983120: Assets/Sprites/Icons/icon_248.png
+    983140: Assets/Sprites/Icons/icon_310.png
+    983180: Assets/Sprites/Icons/icon_434.png
+    983220: Assets/Sprites/Icons/icon_558.png
+    1376356: Assets/Sprites/Icons/icon_44.png
+    1376396: Assets/Sprites/Icons/icon_62.png
+    1376496: Assets/Sprites/Icons/icon_106.png
+    1441892: Assets/Sprites/Icons/icon_71.png
+    1441932: Assets/Sprites/Icons/icon_99.png
+    1442032: Assets/Sprites/Icons/icon_170.png
+    1507428: Assets/Sprites/Icons/icon_150.png
+    1507468: Assets/Sprites/Icons/icon_210.png
+    1507568: Assets/Sprites/Icons/icon_360.png
+    1572964: Assets/Sprites/Icons/icon_310_150.png
+    1573004: Assets/Sprites/Icons/icon_434_210.png
+    1573104: Assets/Sprites/Icons/tile_744_360.png
   metroTileShortName: Run Shadow
   metroCommandLineArgsFile: 
   metroTileShowName: 0
@@ -511,7 +524,6 @@ PlayerSettings:
   WebGL::emscriptenArgs: 
   WebGL::template: APPLICATION:Default
   additionalIl2CppArgs::additionalIl2CppArgs: 
-  firstStreamedSceneWithResources: 0
   cloudProjectId: 9b0927ef-a750-439b-abe2-a64b53e2b791
   projectName: Run Shadow
   organizationId: maikonfarias

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class CharControllerScript : MonoBehaviour
 {
@@ -191,7 +192,7 @@ public class CharControllerScript : MonoBehaviour
     {
       Game.Paused = false;
       Game.Started = true;
-      Application.LoadLevel(Application.loadedLevel);
+      SceneManager.LoadScene(0);
       return;
     }
 
@@ -199,7 +200,7 @@ public class CharControllerScript : MonoBehaviour
     {
       Game.Paused = false;
       Game.Started = false;
-      Application.LoadLevel(Application.loadedLevel);
+      SceneManager.LoadScene(0);
       return;
     }
   }
